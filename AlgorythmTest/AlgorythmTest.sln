@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_TwoIntSumBetween", "LV1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_MeasureSum", "LV1_MeasureSum\LV1_MeasureSum.vcxproj", "{FD9177FA-39B6-464D-85CA-8649055F26BB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_DigitReverse", "LV1_DigitReverse\LV1_DigitReverse.vcxproj", "{F63998A0-00D4-422A-BB9D-131FE6144BD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{FD9177FA-39B6-464D-85CA-8649055F26BB}.Release|x64.Build.0 = Release|x64
 		{FD9177FA-39B6-464D-85CA-8649055F26BB}.Release|x86.ActiveCfg = Release|Win32
 		{FD9177FA-39B6-464D-85CA-8649055F26BB}.Release|x86.Build.0 = Release|Win32
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Debug|x64.ActiveCfg = Debug|x64
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Debug|x64.Build.0 = Debug|x64
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Debug|x86.ActiveCfg = Debug|Win32
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Debug|x86.Build.0 = Debug|Win32
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Release|x64.ActiveCfg = Release|x64
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Release|x64.Build.0 = Release|x64
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Release|x86.ActiveCfg = Release|Win32
+		{F63998A0-00D4-422A-BB9D-131FE6144BD6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
