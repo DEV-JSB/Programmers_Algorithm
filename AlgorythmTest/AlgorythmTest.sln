@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_Hide_PhoneNumber", "LV1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_Hassard", "LV1_Hassard\LV1_Hassard.vcxproj", "{1EADA7E8-69B1-4CEB-9369-D0F8A90DDFC2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_Collatz", "LV1_Collatz\LV1_Collatz.vcxproj", "{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{1EADA7E8-69B1-4CEB-9369-D0F8A90DDFC2}.Release|x64.Build.0 = Release|x64
 		{1EADA7E8-69B1-4CEB-9369-D0F8A90DDFC2}.Release|x86.ActiveCfg = Release|Win32
 		{1EADA7E8-69B1-4CEB-9369-D0F8A90DDFC2}.Release|x86.Build.0 = Release|Win32
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Debug|x64.ActiveCfg = Debug|x64
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Debug|x64.Build.0 = Debug|x64
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Debug|x86.ActiveCfg = Debug|Win32
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Debug|x86.Build.0 = Debug|Win32
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Release|x64.ActiveCfg = Release|x64
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Release|x64.Build.0 = Release|x64
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Release|x86.ActiveCfg = Release|Win32
+		{5927C7D0-66BB-4EF1-9700-0DB7BE791A81}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
