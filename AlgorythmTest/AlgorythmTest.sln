@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_Collatz", "LV1_Collatz\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_SquareRoot", "LV1_SquareRoot\LV1_SquareRoot.vcxproj", "{79E17482-9B3D-4F0A-99E5-29A95F859DD2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LV1_FindNumRemain1", "LV1_FindNumRemain1\LV1_FindNumRemain1.vcxproj", "{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{79E17482-9B3D-4F0A-99E5-29A95F859DD2}.Release|x64.Build.0 = Release|x64
 		{79E17482-9B3D-4F0A-99E5-29A95F859DD2}.Release|x86.ActiveCfg = Release|Win32
 		{79E17482-9B3D-4F0A-99E5-29A95F859DD2}.Release|x86.Build.0 = Release|Win32
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Debug|x64.ActiveCfg = Debug|x64
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Debug|x64.Build.0 = Debug|x64
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Debug|x86.ActiveCfg = Debug|Win32
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Debug|x86.Build.0 = Debug|Win32
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Release|x64.ActiveCfg = Release|x64
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Release|x64.Build.0 = Release|x64
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Release|x86.ActiveCfg = Release|Win32
+		{820DDFAA-2169-4B2D-B0E4-5F11812E10B1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
