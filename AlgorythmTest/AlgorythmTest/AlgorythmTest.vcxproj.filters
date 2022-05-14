@@ -18,5 +18,8 @@
     <ClCompile Include="LV1_DontNumAdd.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_PosNegPlus.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
