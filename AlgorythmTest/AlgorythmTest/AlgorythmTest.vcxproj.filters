@@ -24,5 +24,8 @@
     <ClCompile Include="LV1_ControlString.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_DotProduct.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

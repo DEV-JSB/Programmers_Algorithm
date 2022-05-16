@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="LV1_ControlString.cpp" />
     <ClCompile Include="LV1_DontNumAdd.cpp" />
+    <ClCompile Include="LV1_DotProduct.cpp" />
     <ClCompile Include="LV1_PosNegPlus.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
