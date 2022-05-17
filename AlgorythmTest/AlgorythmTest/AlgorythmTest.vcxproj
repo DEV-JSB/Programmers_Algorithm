@@ -150,6 +150,7 @@
     <ClCompile Include="LV1_Hide_PhoneNumber.cpp" />
     <ClCompile Include="LV1_MakeDecimal.cpp" />
     <ClCompile Include="LV1_MakeSqaure_C_C++.cpp" />
+    <ClCompile Include="LV1_MeasureCountandAdd.cpp" />
     <ClCompile Include="LV1_MeasureSum.cpp" />
     <ClCompile Include="LV1_Odd_Even.cpp" />
     <ClCompile Include="LV1_Output_Avg.cpp" />
