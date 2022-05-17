@@ -139,10 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LV1_Collatz.cpp" />
     <ClCompile Include="LV1_ControlString.cpp" />
+    <ClCompile Include="LV1_DigitPlus.cpp" />
+    <ClCompile Include="LV1_DigitReverse.cpp" />
     <ClCompile Include="LV1_DontNumAdd.cpp" />
     <ClCompile Include="LV1_DotProduct.cpp" />
+    <ClCompile Include="LV1_FindNumRemain1.cpp" />
+    <ClCompile Include="LV1_Hassard.cpp" />
+    <ClCompile Include="LV1_Hide_PhoneNumber.cpp" />
+    <ClCompile Include="LV1_MakeDecimal.cpp" />
+    <ClCompile Include="LV1_MakeSqaure_C_C++.cpp" />
+    <ClCompile Include="LV1_MeasureSum.cpp" />
+    <ClCompile Include="LV1_Odd_Even.cpp" />
+    <ClCompile Include="LV1_Output_Avg.cpp" />
     <ClCompile Include="LV1_PosNegPlus.cpp" />
+    <ClCompile Include="LV1_SquareRoot.cpp" />
+    <ClCompile Include="LV1_SumOfFactors.cpp" />
+    <ClCompile Include="LV1_TwoIntSumBetween.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
