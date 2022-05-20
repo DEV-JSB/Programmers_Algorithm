@@ -51,16 +51,3 @@ vector<int> solution(vector<int> numbers) {
 }
 // 2중 FOR 문으로 , 값을 더할 때 마다 비교해서 넣는다?
 // -> ㄴㄴ 3중 for 문 오바임
-
-void main()
-{
-    vector<int> test;
-    test.push_back(2);
-    test.push_back(1);
-    test.push_back(3);
-    test.push_back(4);
-    test.push_back(1);
-    solution(test);
-
-
-}
