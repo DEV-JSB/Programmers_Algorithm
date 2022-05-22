@@ -29,15 +29,10 @@ int solution(vector<vector<int>> sizes) {
         {
             if (Max < sizes[i][0])
                 Max = sizes[i][0];
-            if (Min < sizes[i][1])
+            if (Min  sizes[i][1])
                 Min = sizes[i][1];
         }
     }
     return Max * Min;
 }
 
-void main()
-{
-    vector<vector<int>> test = { {60,50},{30,70},{60,30},{80,40} };
-    solution(test);
-}
