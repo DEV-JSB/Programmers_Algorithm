@@ -45,5 +45,8 @@
     <ClCompile Include="LV1_2016_Year.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_LottoRank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

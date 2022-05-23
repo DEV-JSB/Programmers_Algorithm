@@ -144,6 +144,7 @@
     <ClCompile Include="LV1_GetMiddle_char.cpp" />
     <ClCompile Include="LV1_LackBill.cpp" />
     <ClCompile Include="LV1_LeastSqaure.cpp" />
+    <ClCompile Include="LV1_LottoRank.cpp" />
     <ClCompile Include="LV1_MakeStrange_str.cpp" />
     <ClCompile Include="LV1_MakeString_to_num.cpp" />
     <ClCompile Include="LV1_NumString_EngWord.cpp" />
