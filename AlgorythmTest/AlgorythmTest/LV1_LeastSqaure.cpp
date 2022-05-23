@@ -29,7 +29,7 @@ int solution(vector<vector<int>> sizes) {
         {
             if (Max < sizes[i][0])
                 Max = sizes[i][0];
-            if (Min  sizes[i][1])
+            if (Min > sizes[i][1])
                 Min = sizes[i][1];
         }
     }
