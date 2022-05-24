@@ -51,5 +51,8 @@
     <ClCompile Include="LV1_Procession_Plus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_SmallestNum_Delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
