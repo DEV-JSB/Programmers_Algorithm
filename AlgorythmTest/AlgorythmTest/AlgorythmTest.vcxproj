@@ -148,6 +148,7 @@
     <ClCompile Include="LV1_MakeStrange_str.cpp" />
     <ClCompile Include="LV1_MakeString_to_num.cpp" />
     <ClCompile Include="LV1_NumString_EngWord.cpp" />
+    <ClCompile Include="LV1_Procession_Plus.cpp" />
     <ClCompile Include="LV1_Ternary.cpp" />
     <ClCompile Include="LV1_WaterMelon.cpp" />
   </ItemGroup>
