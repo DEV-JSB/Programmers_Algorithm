@@ -142,6 +142,7 @@
     <ClCompile Include="LV1_2016_Year.cpp" />
     <ClCompile Include="LV1_BiggestSmallestNum.cpp" />
     <ClCompile Include="LV1_Descending.cpp" />
+    <ClCompile Include="LV1_FindSosu.cpp" />
     <ClCompile Include="LV1_GetMiddle_char.cpp" />
     <ClCompile Include="LV1_IntervalNum.cpp" />
     <ClCompile Include="LV1_LackBill.cpp" />
