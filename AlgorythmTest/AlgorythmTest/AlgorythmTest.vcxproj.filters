@@ -63,5 +63,8 @@
     <ClCompile Include="LV1_FindSosu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_Hate_SameNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
