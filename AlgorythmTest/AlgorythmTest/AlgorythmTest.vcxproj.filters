@@ -66,5 +66,8 @@
     <ClCompile Include="LV1_Caeser_Cipher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_FindKim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
