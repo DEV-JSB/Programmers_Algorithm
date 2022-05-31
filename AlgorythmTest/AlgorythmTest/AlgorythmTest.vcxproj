@@ -142,19 +142,11 @@
     <ClCompile Include="LV1_2016_Year.cpp" />
     <ClCompile Include="LV1_BiggestSmallestNum.cpp" />
     <ClCompile Include="LV1_Caeser_Cipher.cpp" />
-    <ClCompile Include="LV1_Descending.cpp" />
     <ClCompile Include="LV1_FindKim.cpp" />
     <ClCompile Include="LV1_GetMiddle_char.cpp" />
     <ClCompile Include="LV1_Hate_SameNumber.cpp" />
-    <ClCompile Include="LV1_InString_yp_count.cpp" />
-    <ClCompile Include="LV1_IntervalNum.cpp" />
-    <ClCompile Include="LV1_LackBill.cpp" />
-    <ClCompile Include="LV1_LeastSqaure.cpp" />
-    <ClCompile Include="LV1_LottoRank.cpp" />
-    <ClCompile Include="LV1_MakeStrange_str.cpp" />
-    <ClCompile Include="LV1_MakeString_to_num.cpp" />
-    <ClCompile Include="LV1_NumString_EngWord.cpp" />
     <ClCompile Include="LV1_Procession_Plus.cpp" />
+    <ClCompile Include="LV1_StrDescending.cpp" />
     <ClCompile Include="LV1_Ternary.cpp" />
     <ClCompile Include="LV1_WaterMelon.cpp" />
   </ItemGroup>

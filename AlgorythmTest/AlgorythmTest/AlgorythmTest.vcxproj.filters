@@ -15,25 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LV1_LackBill.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LV1_GetMiddle_char.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_MakeStrange_str.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV1_MakeString_to_num.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV1_NumString_EngWord.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LV1_Ternary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV1_LeastSqaure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_WaterMelon.cpp">
@@ -42,31 +27,22 @@
     <ClCompile Include="LV1_2016_Year.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_LottoRank.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LV1_Procession_Plus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV1_IntervalNum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_BiggestSmallestNum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_Descending.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LV1_Hate_SameNumber.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV1_InString_yp_count.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Caeser_Cipher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_FindKim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_StrDescending.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
