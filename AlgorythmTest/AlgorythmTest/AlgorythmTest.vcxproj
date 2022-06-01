@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LV1_Cant_FinishPlayer.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,18 +141,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="LV1_2016_Year.cpp" />
-    <ClCompile Include="LV1_BiggestSmallestNum.cpp" />
-    <ClCompile Include="LV1_Caeser_Cipher.cpp" />
-    <ClCompile Include="LV1_FindKim.cpp" />
-    <ClCompile Include="LV1_GetMiddle_char.cpp" />
-    <ClCompile Include="LV1_Hate_SameNumber.cpp" />
-    <ClCompile Include="LV1_Procession_Plus.cpp" />
-    <ClCompile Include="LV1_StrDescending.cpp" />
-    <ClCompile Include="LV1_Ternary.cpp" />
-    <ClCompile Include="LV1_WaterMelon.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
