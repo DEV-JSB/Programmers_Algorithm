@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LV1_DividedNum.cpp">
+    <ClCompile Include="LV1_StringSortMyMind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
