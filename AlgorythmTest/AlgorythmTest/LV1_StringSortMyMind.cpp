@@ -14,16 +14,30 @@ vector<string> sort(vector<string> str, int n)
         minindex = i;
         for (int j = i + 1; j < tmp.size(); ++j)
         {
-            int k = 1;
-            while (tmp[minindex][n] == tmp[j][n])
+            if(tmp[minindex][n] == tmp[j][n])
             {
-                if (tmp[j][n + k] < tmp[minindex][n + k])
-                {
-                    swap = true;
-                    minindex = j;
+                if (tmp[minindex] == tmp[j])
                     break;
+                for (int k = 0; k < tmp[minindex].size(); ++k)
+                {
+                    if (tmp[j][k] > tmp[minindex][k])
+                        break;
+                    else if (tmp[j][k] < tmp[minindex][k])
+                    {
+                        swap = true;
+                        minindex = j;
+                        break;
+                    }
+                    else if (k == tmp[minindex].size() - 1)
+                    {
+                        if (tmp[minindex].size() > tmp[j].size())
+                        {
+                            swap = true;
+                            minindex = j; 
+                            break;
+                        }
+                    }
                 }
-                ++k;
             }
             if (tmp[j][n] < tmp[minindex][n])
             {
@@ -48,11 +62,3 @@ vector<string> solution(vector<string> strings, int n) {
     return answer;
 }
 
-void main()
-{
-    vector<string> test;
-    test.push_back("sun");
-    test.push_back("bed");
-    test.push_back("car");
-    solution(test, 1);
-}
