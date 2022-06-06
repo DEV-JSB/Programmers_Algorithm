@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LV1_StringSortMyMind.cpp">
+    <ClCompile Include="LV1_DartGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
