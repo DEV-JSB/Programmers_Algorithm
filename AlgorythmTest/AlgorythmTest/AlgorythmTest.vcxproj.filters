@@ -18,5 +18,8 @@
     <ClCompile Include="LV1_DartGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_MokupExam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
