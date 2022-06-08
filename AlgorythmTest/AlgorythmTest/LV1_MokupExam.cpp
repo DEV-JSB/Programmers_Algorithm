@@ -50,10 +50,3 @@ int GetCorrectCount(const vector<int>& pattern, const vector<int>& answers)
     }
     return correctcount;
 }
-
-void main()
-{
-    vector<int> tmp = { 1,2,3,4,5 };
-
-    solution(tmp);
-}
