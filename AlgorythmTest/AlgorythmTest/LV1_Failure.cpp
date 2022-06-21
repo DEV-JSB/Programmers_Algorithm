@@ -1,7 +1,7 @@
 #include<iostream>
 #include <string>
 #include <vector>
-#include<algorithm>
+
 using namespace std;
 
 
@@ -40,18 +40,32 @@ vector<int> solution(int N, vector<int> stages) {
     {
         for (int j = 0; j < stages[i]; ++j)
         {
-            // 스테이지를 클리어 한 횟수를 저장한다
-            StageClearCount[j-1] +=1;
             // 스테이지를 시도한 횟수를 저장한다
-            StageTryCount[j] += 1;
+            ++StageTryCount[j];
+            // 스테이지를 클리어 한 횟수를 저장한다
+            if (j == stages[i] - 1)
+                continue;
+            ++StageClearCount[j];
         }
+            
     }
+
+    for (int i = 0; i < N; ++i)
+    {
+        std::cout << i + 1 << "번째 스테이지를 시도한 횟수 : " << StageTryCount[i] << std::endl;
+    }
+    for (int i = 0; i < N; ++i)
+    {
+        std::cout << i + 1 << "번째 스테이지를 클리어한 횟수 : " << StageClearCount[i] << std::endl;
+    }
+
     for (int i = 0; i < N; ++i)
         failurePercent.push_back(((double)StageTryCount[i] - (double)StageClearCount[i]) / (double)StageTryCount[i]);
     PushAnswer(answer, failurePercent);
 
-    delete[] StageClearCount; 
     delete[] StageTryCount;
+    delete[] StageClearCount;
+
     return answer;
 }
 
