@@ -1,33 +1,24 @@
 #include<iostream>
 #include <string>
 #include <vector>
-
+#include<algorithm>
+#include<map>   
 using namespace std;
 
 
-
-//걍 삽입정렬해
-void PushAnswer(vector<int>& answer, vector<double>percent)
+bool cmp(const pair<int, double> a, const pair<int, double> b)
 {
-    int MaxIndex;
-    while(answer.size()!=percent.size())
-    {
-        MaxIndex = 0;
-        for (int j = 0; j < percent.size(); ++j)
-        {
-            if (percent[MaxIndex] < percent[j])
-                MaxIndex = j;
-        }
-        percent[MaxIndex] = -1.f;
-        answer.push_back(MaxIndex + 1);
-    }
+    if (a.second == b.second)
+        return a.first < b.first;
+    return a.second > b.second;
 }
 
 vector<int> solution(int N, vector<int> stages) {
     vector<int> answer;
-    vector<double> failurePercent;
     int* StageTryCount = new int[N];
     int* StageClearCount = new int[N];
+
+    map<int, double> mapfailure;
 
     for (int i = 0; i < N; ++i)
     {
@@ -36,15 +27,9 @@ vector<int> solution(int N, vector<int> stages) {
     }
     for (int i = 0; i < stages.size(); ++i)
     {
-        for (int j = 0; j < stages[i]; ++j)
+        // && 의 조건이 없어서 잘못 된ㄱ ㅓㅅ이였ㄷ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        for (int j = 0; j < stages[i] && j < N; ++j)
         {
-            // 6인데 , 사실상 5의 인덱스는 접근하면 안됨
-            if (j == N)
-            {
-                StageClearCount[j-1] += 1;
-                StageTryCount[j - 1] += 1;
-                break;
-            }
             // 스테이지를 시도한 횟수를 저장한다
             StageTryCount[j] += 1;
             // 스테이지를 클리어 한 횟수를 저장한다
@@ -59,16 +44,20 @@ vector<int> solution(int N, vector<int> stages) {
     {
         if (StageTryCount[i] == 0)
         {
-            failurePercent.push_back(0);
+            mapfailure.insert({ i+1,0. });
             continue;
         }
-        failurePercent.push_back(((double)StageTryCount[i] - (double)StageClearCount[i]) / (double)StageTryCount[i]);
+        mapfailure.insert({ i+1,((double)StageTryCount[i] - (double)StageClearCount[i]) / (double)StageTryCount[i] });
     }
-    PushAnswer(answer, failurePercent);
+    vector<pair<int, double>> failurevec(mapfailure.begin(), mapfailure.end());
+    sort(failurevec.begin(), failurevec.end(), cmp);
+
+    for (int i = 0; i < N; ++i)
+        answer.push_back(failurevec[i].first);
 
     delete[] StageTryCount;
     delete[] StageClearCount;
-
+     
     return answer;
 }
 
@@ -77,5 +66,5 @@ vector<int> solution(int N, vector<int> stages) {
 
 void main()
 {
-    solution(10,std::vector<int>({ 5,4,3,2 }));
+    solution(5,std::vector<int>({ 2,1,3,5,6,6,6 }));
 }
