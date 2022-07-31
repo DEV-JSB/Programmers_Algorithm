@@ -4,18 +4,6 @@
 using namespace std;
 
 
-
-int PopBack(string& _id)
-{
-    for (int i = _id.size() - 1; i >= 0; --i)
-    {
-        if(NULL == _id[i])
-            _id.pop_back();
-    }
-    return 0;
-}
-
-
 int Filter1(string& _id)
 {
     for (int i = 0; i < _id.size(); ++i)
@@ -27,17 +15,19 @@ int Filter1(string& _id)
 }
 int Filter2(string& _id)
 {
-    for (int i = 0; i < _id.size(); ++i)
+    bool erase = false;
+    for (int i = 0; i < _id.size();)
     {
         if (!('a' <= _id[i] && _id[i] <= 'z')
-                            && !(_id[i] == '-')
-                            && !(_id[i] == '_')
-                            && !(_id[i] == '.'))
+            && !('0' <= _id[i] && _id[i] <= '9')
+            && !(_id[i] == '-')
+            && !(_id[i] == '_')
+            && !(_id[i] == '.'))
         {
-            for (int j = i; j < _id.size(); ++j)
-                _id[j] = _id[j + 1];
-            --i;
+            _id.erase(i, 1);
         }
+        else
+            ++i;
     }
     
     return 0;
@@ -45,14 +35,14 @@ int Filter2(string& _id)
 
 int Filter3(string& _id)
 {
-    for (int i = 0; i < _id.size(); ++i)
+    for (int i = 0; i < _id.size();)
     {
-        if (_id[i] == '.' && _id[i+1] == '.')
+        if (_id[i] == '.' && _id[i + 1] == '.')
         {
-            for (int j = i + 1; j < _id.size() - 1; ++j)
-                _id[j] = _id[j + 1];
-            --i;
+            _id.erase(i, 1);
         }
+        else
+            ++i;
     }  
     return 0;
 
@@ -61,30 +51,25 @@ int Filter3(string& _id)
 int Filter4(string& _id)
 {
     if (_id[0] == '.')
-    {
-        for (int j = 0; j < _id.size() - 1; ++j)
-            _id[j] = _id[j + 1];
-    }
+        _id.erase(0, 1);
     if (_id[_id.size() - 1] == '.')
-        _id[_id.size() - 1] = NULL;
+        _id.erase(_id.size() - 1, 1);
     return 0;
 
 }
 
 int Filter5(string& _id)
 {
-    for (int i = 0; i < _id.size(); ++i)
-    {
-        if (_id[i] == ' ')
-            _id[i] = 'a';
-    }
+    if (0 == _id.size())
+        _id += 'a';
     return 0;
 
 }
 int Filter6(string& _id)
 {
-    int Removesize = _id.size() - 15;
-    for (int i = 0; i < Removesize; ++i)
+    if(16 <= _id.length())
+        _id.erase(15);
+    if (_id[14] == '.')
         _id.pop_back();
     return 0;
 
@@ -93,7 +78,7 @@ int Filter7(string& _id)
 {
     while (_id.length() <= 2)
     {
-        _id[_id.length()] = _id[_id.length() - 1];
+        _id += _id[_id.length() - 1];
     }
     return 0;
 
@@ -102,21 +87,16 @@ int Filter7(string& _id)
 string solution(string new_id) {
     string test = new_id;
     Filter1(test);
-    PopBack(test);
     Filter2(test);
-    PopBack(test);
     Filter3(test);
-    PopBack(test);
     Filter4(test);
-    PopBack(test);
     Filter5(test);
-    PopBack(test);
     Filter6(test);
-    PopBack(test);
+    Filter7(test);
     return test;
 }
 
 void main()
 {
-    solution(string{ "z-+.^." });
+    solution(string{ "abcdefghijklmn.p" });
 }
