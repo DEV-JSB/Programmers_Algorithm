@@ -3,35 +3,35 @@
 #include <map>
 using namespace std;
 
-int CheckReport(vector<string>& _id,vector<string>& _report,map<string,int>& _mapID,vector<int>& _answer)
+struct ReportInformation
+{
+    int k;
+    int mailCount;
+};
+int CheckReport(vector<string>& _id, vector<string>& _report, map<string, ReportInformation>& _mapID, vector<int>& _answer)
 {
     int BlinkIndex;
     for (size_t i = 0; i < _report.size(); ++i)
     {
         BlinkIndex = _report[i].find(" ") + 1;
-        --_mapID[_report[i].substr(BlinkIndex, _report[i].length() - BlinkIndex)];
+        --_mapID[_report[i].substr(BlinkIndex, _report[i].length() - BlinkIndex)].k;
     }
-
-    for (size_t i = 0 ; i < _mapID.size(); ++i)
+    for (size_t i = 0; i < _id.size(); ++i)
     {
-        if (0 == _mapID[_id[i]])
+        if (0 >= (*_mapID.find(_id[i])).second.k)
         {
             for (size_t j = 0; j < _report.size(); ++j)
             {
-                BlinkIndex = _report[j].find(" ") + 1;
+                BlinkIndex = _report[j].find(" ")+1;
                 if (_id[i] == _report[j].substr(BlinkIndex, _report[j].length() - BlinkIndex))
-                {
-                    for (size_t k = 0; k < _id.size(); ++k)
-                    {
-                        if (_id[k] == _report[j].substr(0, BlinkIndex - 1))
-                        {
-                            ++_answer[k];
-                            break;
-                        }
-                    }
-                }
+                    _mapID[_report[j].substr(0, BlinkIndex-1)].mailCount++;
             }
         }
+    }
+
+    for (size_t i = 0; i < _id.size(); ++i)
+    {
+        _answer.push_back(_mapID[_id[i]].mailCount);
     }
 
     return 0;
@@ -39,22 +39,20 @@ int CheckReport(vector<string>& _id,vector<string>& _report,map<string,int>& _ma
 
 vector<int> solution(vector<string> id_list, vector<string> report, int k) {
     vector<int> answer;
-    
-    for (size_t i = 0; i < id_list.size(); ++i)
-    {
-        answer.push_back(0);
-    }
 
-    map<string, int> mapID;
+    map<string, ReportInformation> mapID;
     for (size_t i = 0; i < id_list.size(); ++i)
     {
-        mapID.insert({ id_list[i],k });
+        ReportInformation tmp;
+        tmp.k = k;
+        tmp.mailCount = 0;
+        mapID.insert({ id_list[i],tmp });
     }
 
     // 한 유저를 여러번 신고할 경우의 필터링
     for (auto iter = report.begin(); iter != report.end(); ++iter)
     {
-        for (auto iter2 = iter + 1 ; iter2 != report.end();)
+        for (auto iter2 = iter + 1; iter2 != report.end();)
         {
             if ((*iter) == (*iter2))
                 iter2 = report.erase(iter2);
@@ -73,5 +71,5 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
 
 void main()
 {
-    solution(vector<string>({ "con", "ryan" }), vector<string>({ "ryan con", "ryan con", "ryan con", "ryan con" }), 3);
+    solution(vector<string>({ "muzi", "frodo", "apeach", "neo" }), vector<string>({ "muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi" }), 2);
 }
