@@ -7,7 +7,9 @@ using namespace std;
 struct ReportInformation
 {
     int k;
+    // 신고를 해서 받는 결과의 메일이다.
     int mailCount;
+    // 신고를 한 명단이다.
     vector<string> ReportList;
 };
 int CheckReport(vector<string>& _id, vector<string>& _report, map<string, ReportInformation>& _mapID, vector<int>& _answer)
@@ -34,7 +36,20 @@ int CheckReport(vector<string>& _id, vector<string>& _report, map<string, Report
             _mapID[Reporter].ReportList.push_back(ReportString);
         }
     }
-    for (size_t i = 0; i < _id.size(); ++i)
+
+    // 그럼 최종적으로 여기까지 왔으면 , 맵에 내가 신고한 애들의 명단이 들어있고 , 내가 신고 받은 횟수인 k 가 있다 . 
+
+
+    for (auto iter = _mapID.begin(); iter != _mapID.end(); ++iter)
+    {
+        for (size_t i = 0; i < (*iter).second.ReportList.size(); ++i)
+        {
+            if (_mapID[(*iter).second.ReportList[i]].k <= 0)
+                ++(*iter).second.mailCount;
+        }
+    }
+
+    /*for (size_t i = 0; i < _id.size(); ++i)
     {
         if (0 >= (*_mapID.find(_id[i])).second.k)
         {
@@ -49,7 +64,7 @@ int CheckReport(vector<string>& _id, vector<string>& _report, map<string, Report
                 }
             }
         }
-    }
+    }*/
     for (size_t i = 0; i < _id.size(); ++i)
     {
         _answer.push_back(_mapID[_id[i]].mailCount);
