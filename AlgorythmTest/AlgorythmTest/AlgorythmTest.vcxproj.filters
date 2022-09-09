@@ -36,7 +36,7 @@
     <ClCompile Include="LV1_NewIDRecommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_ReportResult.cpp">
+    <ClCompile Include="LV1_TestCharacter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

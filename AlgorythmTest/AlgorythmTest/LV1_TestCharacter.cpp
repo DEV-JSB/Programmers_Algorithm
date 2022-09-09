@@ -10,3 +10,4 @@ char* solution(const char* survey[], size_t survey_len, int choices[], size_t ch
     char* answer = (char*)malloc(1);
     return answer;
 }
+// 열심히해야지.. 낼부터 ㅎ
