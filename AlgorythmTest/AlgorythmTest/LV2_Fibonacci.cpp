@@ -14,12 +14,13 @@ using namespace std;
 // [ 3 , 2 ] -> F(5)
 // [ 3 , 5 ] -> F(6)
 // [ 0 , 1 ]
-int fibonacci(int n)
-{
-    int add[4] = { 0, 1, 0, 0 };
 
-    for (int i = 2; i <= n; ++i)
-        add[3] = add[i % 3] = ((add[(i - 2) % 3]) + (add[(i - 1) % 3])) % 1234567;
-
-    return add[3];
+int solution(int n) {
+    int arr[2] = { 0,1 };
+    int saveIndex = LEFT;
+    for (int i = 0; i < n - 2; ++i, saveIndex++, saveIndex %= 2)
+    {
+        arr[saveIndex] = (arr[LEFT] + arr[RIGHT]) % 1234567;
+    }
+    return (arr[LEFT] + arr[RIGHT]) % 1234567;
 }
