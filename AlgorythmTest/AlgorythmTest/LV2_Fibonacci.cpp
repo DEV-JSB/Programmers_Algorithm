@@ -4,6 +4,7 @@
 using namespace std;
 #define LEFT 0
 #define RIGHT 1
+// 0 1 1 2 3 5 8 13 21
 // [ 0 , 1 ] -> F(2)
 // 더한거 왼쪽에
 // [ 1 , 1 ] -> F(3)
@@ -13,24 +14,12 @@ using namespace std;
 // [ 3 , 2 ] -> F(5)
 // [ 3 , 5 ] -> F(6)
 // [ 0 , 1 ]
+int fibonacci(int n)
+{
+    int add[4] = { 0, 1, 0, 0 };
 
-int solution(int n) {
-    if (n == 1)
-        return 0;
-    else if (n == 0)
-        return 0;
-    else if (n == 2)
-        return 1;
-    int arr[2] = { 0,1 };
-    int saveIndex = LEFT;
-    for (int i = 0; i < n - 2; ++i)
-    {
-        int tmp = arr[LEFT] + arr[RIGHT];
-        arr[saveIndex] = tmp;
-        if (LEFT == saveIndex)
-            saveIndex = RIGHT;
-        else
-            saveIndex = LEFT;
-    }
-    return arr[LEFT] + arr[RIGHT];
+    for (int i = 2; i <= n; ++i)
+        add[3] = add[i % 3] = ((add[(i - 2) % 3]) + (add[(i - 1) % 3])) % 1234567;
+
+    return add[3];
 }
