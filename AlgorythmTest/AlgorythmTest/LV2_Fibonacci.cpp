@@ -23,7 +23,7 @@ int solution(int n) {
         return 1;
     int arr[2] = { 0,1 };
     int saveIndex = LEFT;
-    for (int i = 0; i < n-2; ++i)
+    for (int i = 0; i < n - 2; ++i)
     {
         int tmp = arr[LEFT] + arr[RIGHT];
         arr[saveIndex] = tmp;
