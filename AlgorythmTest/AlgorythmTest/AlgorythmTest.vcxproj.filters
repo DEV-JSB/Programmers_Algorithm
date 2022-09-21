@@ -42,5 +42,8 @@
     <ClCompile Include="LV2_CorrectBracket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_LeastCommonMultiple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
