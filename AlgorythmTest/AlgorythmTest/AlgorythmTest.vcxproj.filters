@@ -45,10 +45,10 @@
     <ClCompile Include="LV2_LeastCommonMultiple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV2_MakeMinValue.cpp">
+    <ClCompile Include="LV0_CutPaper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV0_CutPaper.cpp">
+    <ClCompile Include="LV0_SevenCount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
