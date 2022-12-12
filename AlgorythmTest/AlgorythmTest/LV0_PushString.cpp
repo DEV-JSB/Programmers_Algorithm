@@ -18,9 +18,9 @@ int solution(string A, string B) {
     for (int i = 0; i < A.length() - 1; ++i)
     {
         char lastWord = char_A[A.length() - 1];
-        strncpy(char_A + 1, A.c_str() , A.length()-1);
+        strncpy(char_A + 1, char_A, A.length() - 1);
         char_A[0] = lastWord;
-        A = char_A;
+
         if (!strcmp(char_A, B.c_str()))
             return i + 1;
     }
@@ -32,5 +32,5 @@ int solution(string A, string B) {
 
 void main()
 {
-    solution("rainbowsix", "xrainbowsi");
+    solution("hello", "ohell");
 }
