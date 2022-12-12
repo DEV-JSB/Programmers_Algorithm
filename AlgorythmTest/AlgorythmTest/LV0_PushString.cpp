@@ -1,5 +1,5 @@
 #include <string>
-#include <vector>
+#include <cstring>
 
 using namespace std;
 
@@ -12,15 +12,16 @@ int solution(string A, string B) {
     // 같지 않다면 반복한다
     // 만약 반복한 값이 A의 길이 값 - 1 보다 커진다면 -1을 반환한다
 
-    for (int i = 0; i < A.length(); ++i)
+    char* char_A{};
+    char_A = new char[A.length() + 1]{};
+    strcpy(char_A, A.c_str());
+    for (int i = 0; i < A.length() - 1; ++i)
     {
-        char firstWord = A[A.length() - 1];
-        strncpy(A[0], B.c_str(), A.length() - 1);
-        for (int j = 0; j < A.length() - 1; ++j)
-            A[j + 1] = A[j];
-        A[0] = firstWord;
-
-        if (A == B)
+        char lastWord = char_A[A.length() - 1];
+        strncpy(char_A + 1, A.c_str() , A.length()-1);
+        char_A[0] = lastWord;
+        A = char_A;
+        if (!strcmp(char_A, B.c_str()))
             return i + 1;
     }
 
@@ -31,5 +32,5 @@ int solution(string A, string B) {
 
 void main()
 {
-    solution("hello", "ohell");
+    solution("rainbowsix", "xrainbowsi");
 }

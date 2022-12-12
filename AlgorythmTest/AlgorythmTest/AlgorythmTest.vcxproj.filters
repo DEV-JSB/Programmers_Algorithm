@@ -15,10 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LV1_Budget.cpp">
+    <ClCompile Include="LV0_ContinueCountSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_Pocketmon.cpp">
+    <ClCompile Include="LV0_CutPaper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV0_PushString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV0_SevenCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_Budget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Failure.cpp">
@@ -30,31 +39,22 @@
     <ClCompile Include="LV1_KeyPad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV1_PuppetDraw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LV1_NewIDRecommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV2_Fibonacci.cpp">
+    <ClCompile Include="LV1_Pocketmon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_PuppetDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV2_CorrectBracket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_Fibonacci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="LV2_LeastCommonMultiple.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV0_CutPaper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV0_SevenCount.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV0_ContinueCountSum.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LV0_PushString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
