@@ -13,14 +13,12 @@ int solution(string A, string B) {
     // 같지 않다면 반복한다
     // 만약 반복한 값이 A의 길이 값 - 1 보다 커진다면 -1을 반환한다
 
-    char* char_A{};
-    char_A = new char[A.length() + 1]{};
+    char* char_A = new char[A.length()];
     strcpy(char_A, A.c_str());
     for (int i = 0; i < A.length() - 1; ++i)
     {
-        char lastWord = char_A[A.length() - 1];
         strncpy(char_A + 1, A.c_str(), A.length() - 1);
-        char_A[0] = lastWord;
+        char_A[0] = A[A.length() - 1];
         A = char_A;
         if (!strcmp(char_A, B.c_str()))
             return i + 1;
@@ -28,4 +26,10 @@ int solution(string A, string B) {
 
 
     return -1;
+}
+
+
+void main()
+{
+    solution("rainbowsix", "xrainbowsi");
 }
