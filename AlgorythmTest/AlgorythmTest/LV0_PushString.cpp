@@ -5,7 +5,8 @@ using namespace std;
 
 int solution(string A, string B) {
     int answer = 0;
-
+    if (A == B)
+        return 0;
     // A 의 길이만큼 당긴다
     // 1 만큼 당기며 당긴 결과값이 B와 같은지 확인한다
     // 같다면 당긴 횟수를 반환한다
@@ -18,19 +19,13 @@ int solution(string A, string B) {
     for (int i = 0; i < A.length() - 1; ++i)
     {
         char lastWord = char_A[A.length() - 1];
-        strncpy(char_A + 1, char_A, A.length() - 1);
+        strncpy(char_A + 1, A.c_str(), A.length() - 1);
         char_A[0] = lastWord;
-
+        A = char_A;
         if (!strcmp(char_A, B.c_str()))
             return i + 1;
     }
 
 
     return -1;
-}
-
-
-void main()
-{
-    solution("hello", "ohell");
 }
