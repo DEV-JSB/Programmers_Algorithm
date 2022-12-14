@@ -13,7 +13,7 @@ int solution(string A, string B) {
     // 같지 않다면 반복한다
     // 만약 반복한 값이 A의 길이 값 - 1 보다 커진다면 -1을 반환한다
 
-    char* char_A = new char[A.length()];
+    char* char_A = new char[A.length() + 1];
     strcpy(char_A, A.c_str());
     for (int i = 0; i < A.length() - 1; ++i)
     {

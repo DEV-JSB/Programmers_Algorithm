@@ -57,5 +57,8 @@
     <ClCompile Include="LV2_LeastCommonMultiple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_SqrtDiscrimination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
