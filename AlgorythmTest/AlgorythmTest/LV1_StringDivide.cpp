@@ -7,35 +7,44 @@ int solution(string s) {
     if (1 == s.length())
         return 0;
     int answer = 0;
-    string tmp = s;
     char firstWord;
-    int correctCount;
-    int wrongCount;
+    int correctCount = 1;
+    int wrongCount = 0;
+    int strLength = s.length();
 
-    for (int i = 0; 1 < tmp.length(); ++i)
+    firstWord = s[0];
+    for (int i = 1 ; 1 < s.length();)
     {
-        firstWord = tmp[0];
-        correctCount = 0;
-        wrongCount = 0;
-        for (int j = 0; j < tmp.length(); ++j)
+        firstWord == s[i] ? ++correctCount : ++wrongCount;
+        if (correctCount == wrongCount)
         {
-            firstWord == tmp[j] ? ++correctCount : ++wrongCount;
-            if (correctCount != 0 && correctCount == wrongCount)
+            ++answer;
+            s = s.substr(correctCount + wrongCount, s.length());
+            correctCount = 0;
+            wrongCount = 0;
+            strLength = s.length();
+            i = 0;
+        }
+        else if (strLength == i + 1)
+        {
+            if (s[0] == firstWord && (correctCount == s.length() || wrongCount == s.length()))
+                return ++answer;
+            else
             {
-                ++answer;
-                tmp = tmp.substr(correctCount + wrongCount, tmp.length());
-                correctCount = 0;
+                correctCount = 1;
                 wrongCount = 0;
-                j = -1;
-                continue;
+                i = 1;
+                firstWord = s[0];
+                strLength = s.length();
             }
         }
+        else
+            ++i;
     }
-    
-    return 0 < tmp.length() ? ++answer : answer;
+    return 0 < s.length() ? ++answer : answer;
 }
 
 void main()
 {
-    solution("aaabbaccccabba");
+    solution("zcbbbbbbbbbbbbb");
 }
