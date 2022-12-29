@@ -5,14 +5,14 @@ using namespace std;
 
 int solution(string s) {
     if (1 == s.length())
-        return 0;
+        return 1;
     int answer = 0;
     char firstWord;
     int correctCount = 1;
     int wrongCount = 0;
 
     firstWord = s[0];
-    for (int i = 1 ; i < s.length();++i)
+    for (int i = 1; i < s.length(); ++i)
     {
         firstWord == s[i] ? ++correctCount : ++wrongCount;
         if (correctCount == wrongCount)
@@ -26,6 +26,8 @@ int solution(string s) {
             if (i == s.length())
                 return answer;
         }
+        else if (correctCount == s.length() || wrongCount == s.length())
+            return 1;
     }
     return ++answer;
 }
