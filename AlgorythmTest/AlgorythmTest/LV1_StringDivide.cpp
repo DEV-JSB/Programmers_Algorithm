@@ -22,12 +22,10 @@ int solution(string s) {
             wrongCount = 0;
             firstWord = s[i + 1];
             i = i + 1;
+            // ³ª´³´Âµ¥ ¶§¸¶Ä§ µü ³ª´² ¶³¾îÁ³À»¶§ ¹ÝÈ¯ÇÑ´Ù
+            if (i == s.length())
+                return answer;
         }
     }
-    return s.length() % 2 == 0 ? answer : ++answer;
-}
-
-void main()
-{
-    solution("aaabbaccccabba");
+    return ++answer;
 }
