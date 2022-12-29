@@ -10,41 +10,24 @@ int solution(string s) {
     char firstWord;
     int correctCount = 1;
     int wrongCount = 0;
-    int strLength = s.length();
 
     firstWord = s[0];
-    for (int i = 1 ; 1 < s.length();)
+    for (int i = 1 ; i < s.length();++i)
     {
         firstWord == s[i] ? ++correctCount : ++wrongCount;
         if (correctCount == wrongCount)
         {
             ++answer;
-            s = s.substr(correctCount + wrongCount, s.length());
-            correctCount = 0;
+            correctCount = 1;
             wrongCount = 0;
-            strLength = s.length();
-            i = 0;
+            firstWord = s[i + 1];
+            i = i + 1;
         }
-        else if (strLength == i + 1)
-        {
-            if (s[0] == firstWord && (correctCount == s.length() || wrongCount == s.length()))
-                return ++answer;
-            else
-            {
-                correctCount = 1;
-                wrongCount = 0;
-                i = 1;
-                firstWord = s[0];
-                strLength = s.length();
-            }
-        }
-        else
-            ++i;
     }
-    return 0 < s.length() ? ++answer : answer;
+    return s.length() % 2 == 0 ? answer : ++answer;
 }
 
 void main()
 {
-    solution("zcbbbbbbbbbbbbb");
+    solution("aaabbaccccabba");
 }
