@@ -3,11 +3,12 @@
 
 using namespace std;
 
-#define AMERICANO_PRICE 5500
-vector<int> solution(int money) {
-    vector<int> answer;
-    answer.push_back(money / AMERICANO_PRICE);
-    answer.push_back(money % AMERICANO_PRICE);
-
+int solution(vector<int> array, int height) {
+    int answer = 0;
+    for (int tall : array)
+    {
+        if (height < tall)
+            ++answer;
+    }
     return answer;
 }
