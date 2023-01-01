@@ -3,12 +3,10 @@
 
 using namespace std;
 
-int solution(vector<int> array, int height) {
-    int answer = 0;
-    for (int tall : array)
-    {
-        if (height < tall)
-            ++answer;
-    }
+vector<int> solution(int money) {
+    vector<int> answer;
+    answer.push_back(money / 5500);
+    answer.push_back(money % 5500);
+
     return answer;
 }

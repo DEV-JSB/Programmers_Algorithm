@@ -81,5 +81,8 @@
     <ClCompile Include="LV0_IceAmericano.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_TallerThenMussk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
