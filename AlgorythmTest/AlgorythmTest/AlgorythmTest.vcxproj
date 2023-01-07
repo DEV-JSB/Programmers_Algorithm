@@ -62,6 +62,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_Protactor.cpp" />
     <ClCompile Include="LV0_PushString.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -94,6 +95,7 @@
     </ClCompile>
     <ClCompile Include="LV0_TwoNumMin.cpp" />
     <ClCompile Include="LV0_TwoNumMultiple.cpp" />
+    <ClCompile Include="LV0_TwoNumRemainder.cpp" />
     <ClCompile Include="LV0_TwoNumShare.cpp" />
     <ClCompile Include="LV1_Budget.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
