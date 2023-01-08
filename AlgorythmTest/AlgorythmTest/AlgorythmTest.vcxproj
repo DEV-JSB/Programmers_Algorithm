@@ -96,6 +96,7 @@
     </ClCompile>
     <ClCompile Include="LV0_TwoNumMin.cpp" />
     <ClCompile Include="LV0_TwoNumMultiple.cpp" />
+    <ClCompile Include="LV0_TwoNumPlus.cpp" />
     <ClCompile Include="LV0_TwoNumRemainder.cpp" />
     <ClCompile Include="LV0_TwoNumShare.cpp" />
     <ClCompile Include="LV1_Budget.cpp">
