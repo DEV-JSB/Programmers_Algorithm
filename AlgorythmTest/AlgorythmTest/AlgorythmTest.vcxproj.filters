@@ -135,5 +135,8 @@
     <ClCompile Include="LV1_TheThreeMusketters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_VacterialGrowth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
