@@ -7,8 +7,6 @@ int solution(vector<int> ingredient) {
     int answer = 0;
     int countIndex = 0;
 
-    while (countIndex <= ingredient.size() - 4)
-    {
         for (vector<int>::iterator iter = ingredient.begin();  countIndex <= ingredient.size() - 4; ++iter, ++countIndex)
         {
             if (ingredient.size() < 4)
@@ -22,8 +20,6 @@ int solution(vector<int> ingredient) {
                 countIndex = 0;
             }
         }
-    }
-
     return answer;
 }
 
