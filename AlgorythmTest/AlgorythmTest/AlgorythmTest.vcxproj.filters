@@ -147,7 +147,10 @@
     <ClCompile Include="LV1_MostNearestWord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV0_StringSort1.cpp">
+    <ClCompile Include="LV0_StringSort2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_NumberPartner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
