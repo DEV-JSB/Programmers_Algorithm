@@ -153,5 +153,8 @@
     <ClCompile Include="LV1_NumberPartner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_KnightsWeapons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
