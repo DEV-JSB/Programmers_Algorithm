@@ -159,5 +159,8 @@
     <ClCompile Include="LV1_HOF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_Babbling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
