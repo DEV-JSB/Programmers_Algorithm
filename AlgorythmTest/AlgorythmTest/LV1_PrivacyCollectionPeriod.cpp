@@ -17,7 +17,7 @@ using namespace std;
 
 // 우선 두자리 수를 반환받아야 할듯
 
-int GetInt(char _first, char _second)
+int GetInt(const char _first, const char _second)
 {
     return (_first - '0') * 10 + (_second - '0');
 }
@@ -29,23 +29,8 @@ int GetLastDay(const string _today, const string _path)
     int month[2]{GetInt(_today[5],_today[6]),GetInt(_path[5],_path[6])};
     int day[2]{ GetInt(_today[8],_today[9]),GetInt(_path[8],_path[9]) };
 
-    // 연도를 지난 날을 계산한다.
-    // 여기서도 예외가 필요하다 무조건 차로 곱하면 안된다.
-    // 월은 뺐을때 음수가 되는 경우는 연도 횟수를 차감하면 될듯
-    if (month[TODAY] <= month[PATH])
-    {
-        if(years[TODAY] > years[PATH])
-            LastDay += ((years[TODAY] - years[PATH]) - 1) * 12 * MONTH_DAY;
-        LastDay += ((month[TODAY] - month[PATH]) + 12) * MONTH_DAY;
-    }
-    else
-    {
-        LastDay += ((years[TODAY] - years[PATH])) * 12 * MONTH_DAY;
-        LastDay += ((month[TODAY] - month[PATH]) + 1) * MONTH_DAY;
-    }
-    LastDay -= (MONTH_DAY - day[TODAY]);
-    LastDay -= day[PATH];
-
+    LastDay = (((years[TODAY] * 12) + month[TODAY]) * 28) + day[TODAY];
+    LastDay -= (((years[PATH] * 12) + month[PATH]) * 28) + day[PATH];
     return LastDay;
 }
 
@@ -53,12 +38,29 @@ vector<int> solution(string today, vector<string> terms, vector<string> privacie
     vector<int> answer;
     int termsDay[26]{};
     
+    // 하나 이상 존재한다 했으며 privacies 길이가 1 이상이다라고 적혀있어 적용한 예외처리
+    if (privacies.size() == 1)
+    {
+        answer.push_back(1);
+        return answer;
+    }
+
     for (int i = 0; i < terms.size(); ++i)
     {
         if (terms[i].length() == 3)
             termsDay[terms[i][0] - 'A'] = MONTH_DAY * GetInt('0', terms[i][2]);
-        else
+        else if (terms[i].length() == 4)
+        {
             termsDay[terms[i][0] - 'A'] = MONTH_DAY * GetInt(terms[i][2], terms[i][3]);
+        }
+        else
+        {
+            termsDay[terms[i][0] - 'A'] = 100 * (terms[i][2] - '0');
+            termsDay[terms[i][0] - 'A'] += 10 * (terms[i][3] - '0');
+            termsDay[terms[i][0] - 'A'] += (terms[i][4] - '0');
+            termsDay[terms[i][0] - 'A'] *= 28;
+
+        }
     }
 
     for (int i = 0; i < privacies.size(); ++i)
