@@ -171,5 +171,8 @@
     <ClCompile Include="LV0_TwoNumDivide.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_GetSquareSize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
