@@ -183,5 +183,8 @@
     <ClCompile Include="LV0_EvenOddCount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ArrayElementLength.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
