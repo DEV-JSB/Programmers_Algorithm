@@ -63,7 +63,7 @@
     <ClCompile Include="LV0_CutString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV0_SlicePizza.cpp">
+    <ClCompile Include="LV0_SlicePizza3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV1_ColaProblem.cpp">
@@ -187,6 +187,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV0_SlicePizza1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
