@@ -234,5 +234,8 @@
     <ClCompile Include="LV0_ArrCuttung.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ExoplanetsAge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
