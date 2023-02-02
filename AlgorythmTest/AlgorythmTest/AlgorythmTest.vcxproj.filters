@@ -231,5 +231,8 @@
     <ClCompile Include="LV0_ParticularWordDelete.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ArrCuttung.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
