@@ -12,7 +12,7 @@ int solution(string t, string p) {
     unsigned long long pNum = 0;
     for (int i = 0 ; i < p.length() ; ++i)
     {
-        pNum += p[i] - '0';
+        pNum += p[i] - "0";
         pNum *= 10;
     }
     pNum /= 10;
@@ -22,7 +22,7 @@ int solution(string t, string p) {
     {
         for (int j = i; j < i + p.length(); ++j)
         {
-            tmp += t[j] - '0';
+            tmp += t[j] - "0";
             tmp *= 10;
         }
         tmp /= 10;

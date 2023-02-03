@@ -27,7 +27,7 @@ string solution(string X, string Y) {
         return "-1";
     else
     {
-        for (char c = '9'; '0' <= c; --c)
+        for (char c = "9"; "0" <= c; --c)
         {
             if (XcharCount.find(c) != XcharCount.end() && YcharCount.find(c) != YcharCount.end())
             {
@@ -42,7 +42,7 @@ string solution(string X, string Y) {
     bool IsNull = true;
     for (int i = 0; i < answer.length(); ++i)
     {
-        if (answer[i] != '0')
+        if (answer[i] != "0")
         {
             IsNull = false;
             break;

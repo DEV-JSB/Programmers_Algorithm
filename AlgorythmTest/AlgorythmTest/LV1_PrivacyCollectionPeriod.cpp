@@ -19,7 +19,7 @@ using namespace std;
 
 int GetInt(const char _first, const char _second)
 {
-    return (_first - '0') * 10 + (_second - '0');
+    return (_first - "0") * 10 + (_second - "0");
 }
 
 int GetLastDay(const string _today, const string _path)
@@ -48,24 +48,24 @@ vector<int> solution(string today, vector<string> terms, vector<string> privacie
     for (int i = 0; i < terms.size(); ++i)
     {
         if (terms[i].length() == 3)
-            termsDay[terms[i][0] - 'A'] = MONTH_DAY * GetInt('0', terms[i][2]);
+            termsDay[terms[i][0] - "A"] = MONTH_DAY * GetInt("0", terms[i][2]);
         else if (terms[i].length() == 4)
         {
-            termsDay[terms[i][0] - 'A'] = MONTH_DAY * GetInt(terms[i][2], terms[i][3]);
+            termsDay[terms[i][0] - "A"] = MONTH_DAY * GetInt(terms[i][2], terms[i][3]);
         }
         else
         {
-            termsDay[terms[i][0] - 'A'] = 100 * (terms[i][2] - '0');
-            termsDay[terms[i][0] - 'A'] += 10 * (terms[i][3] - '0');
-            termsDay[terms[i][0] - 'A'] += (terms[i][4] - '0');
-            termsDay[terms[i][0] - 'A'] *= 28;
+            termsDay[terms[i][0] - "A"] = 100 * (terms[i][2] - "0");
+            termsDay[terms[i][0] - "A"] += 10 * (terms[i][3] - "0");
+            termsDay[terms[i][0] - "A"] += (terms[i][4] - "0");
+            termsDay[terms[i][0] - "A"] *= 28;
 
         }
     }
 
     for (int i = 0; i < privacies.size(); ++i)
     {
-        if (GetLastDay(today, privacies[i]) >= termsDay[privacies[i][11] - 'A'])
+        if (GetLastDay(today, privacies[i]) >= termsDay[privacies[i][11] - "A"])
             answer.push_back(i + 1);
     }
     return answer;

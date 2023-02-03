@@ -22,7 +22,7 @@ void SortString(string& _str)
 string solution(string my_string) {
     string answer = "";
     for (char a : my_string)
-        answer += 'a' <= a ? a : a + 32;
+        answer += "a" <= a ? a : a + 32;
     SortString(answer);
     return answer;
 }

@@ -18,7 +18,7 @@ int solution(vector<string> babbling) {
         checkBit = 0;
         for (int j = 0; j < babbling[i].length();)
         {
-            if (babbling[i][j] == 'a'
+            if (babbling[i][j] == "a"
                 && babbling[i].substr(j, canSay[0].length()) == canSay[0]
                 && !(checkBit & A))
             {
@@ -26,7 +26,7 @@ int solution(vector<string> babbling) {
                 checkBit |= A;
                 j += canSay[0].length();
             }
-            else if (babbling[i][j] == 'y'
+            else if (babbling[i][j] == "y"
                 && babbling[i].substr(j, canSay[1].length()) == canSay[1]
                 && !(checkBit & Y))
             {
@@ -36,7 +36,7 @@ int solution(vector<string> babbling) {
                 j += canSay[1].length();
 
             }
-            else if (babbling[i][j] == 'w'
+            else if (babbling[i][j] == "w"
                 && babbling[i].substr(j, canSay[2].length()) == canSay[2]
                 && !(checkBit & W))
             {
@@ -46,7 +46,7 @@ int solution(vector<string> babbling) {
                 j += canSay[2].length();
 
             }
-            else if (babbling[i][j] == 'm'
+            else if (babbling[i][j] == "m"
                 && babbling[i].substr(j, canSay[3].length()) == canSay[3]
                 && !(checkBit & M))
             {

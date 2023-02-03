@@ -24,14 +24,14 @@ using std::string;
 // 열린게 1개를 초과 하고 닫힌게 나왔을 때
 bool solution(string s)
 {
-    if (')' == s[0])
+    if (")" == s[0])
         return false;
     bool bAnswer;
     int openCount = 0;
     int closeCount = 0;
     for (int i = 0; i < s.length(); ++i)
     {
-        if (s[i] == '(')
+        if (s[i] == "(")
             ++openCount;
         else
             --openCount;

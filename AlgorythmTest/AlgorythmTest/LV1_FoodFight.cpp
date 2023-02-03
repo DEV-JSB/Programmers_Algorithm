@@ -31,13 +31,13 @@ string solution(vector<int> food) {
     for (int i = 0; i < counting.size(); ++i)
     {
         for(int j = 0 ; j < counting[i].count; ++j)
-            answer += counting[i].idx + '0';
+            answer += counting[i].idx + "0";
     }
-    answer += '0';
+    answer += "0";
     for (int i = counting.size() - 1; i >= 0; --i)
     {
         for (int j = 0; j < counting[i].count; ++j)
-            answer += counting[i].idx + '0';
+            answer += counting[i].idx + "0";
     }
 
     return answer;
