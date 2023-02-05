@@ -255,5 +255,8 @@
     <ClCompile Include="LV0_Make2Demension.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_DivideMarble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
