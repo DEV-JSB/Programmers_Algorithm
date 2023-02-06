@@ -258,5 +258,8 @@
     <ClCompile Include="LV0_DivideMarble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ArrayRotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
