@@ -261,5 +261,8 @@
     <ClCompile Include="LV0_ArrayRotation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_OurOwnCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
