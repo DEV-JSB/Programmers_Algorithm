@@ -267,5 +267,8 @@
     <ClCompile Include="LV0_GetPointLocation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_DiceCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
