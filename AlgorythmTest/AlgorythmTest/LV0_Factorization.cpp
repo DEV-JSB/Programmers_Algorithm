@@ -3,31 +3,42 @@
 
 using namespace std;
 
-vector<int> solution(int n) {
-    vector<int> answer;
-    bool numIsDecimal = true;
-    bool isDecimal = false;
-    for (int i = 2; i * i <= n; ++i)
+bool IsDecimal(const int num)
+{
+    bool isDecimal = true;
+    for (int i = 2; i * i <= num; ++i)
     {
-        if (n % i == 0)
+        if (i == 2 || i == 3 || i == 5 || i == 7)
+            return true;
+        if (num % i == 0)
         {
-            numIsDecimal = false;
-            isDecimal = true;
-            for (int j = 2; j * j <= i; ++j)
-            {
-                if (i % j == 0)
-                {
-                    isDecimal = false;
-                    break;
-                }
-            }
-            if (isDecimal)
-                answer.push_back(i);
+            return false;
+            break;
         }
     }
-    if (numIsDecimal)
-        answer.push_back(n);
+    return true;
+}
 
+vector<int> solution(int n) {
+    vector<int> answer;
+    int num = n; 
+    int lastDecimal = 0;
+    for (int i = 2; i * i <= num; ++i)
+    {
+        if (IsDecimal(i) && num % i == 0)
+        {
+            lastDecimal = i;
+            answer.push_back(i);
+            while (num % i == 0)
+                num /= i;
+        }
+    }
+    
+    if (IsDecimal(n) && answer.size() == 0)
+        answer.push_back(n);
+    else if(IsDecimal(num) && num > lastDecimal)
+        answer.push_back(num);
+    
 
     return answer;
 }
