@@ -300,5 +300,8 @@
     <ClCompile Include="LV0_MakeMaxValue2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_CharacterCoordinate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
