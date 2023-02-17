@@ -306,5 +306,8 @@
     <ClCompile Include="LV0_TriangleCompletionCondition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_GetMeasure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
