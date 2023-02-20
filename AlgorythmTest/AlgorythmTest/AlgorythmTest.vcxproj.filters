@@ -315,5 +315,8 @@
     <ClCompile Include="LV0_TriangleCompletionCondition2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_FindBiggestNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
