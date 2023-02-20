@@ -312,7 +312,7 @@
     <ClCompile Include="LV0_PlusHiddenNumber2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LV0_DuplicationCharDelete.cpp">
+    <ClCompile Include="LV0_TriangleCompletionCondition2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
