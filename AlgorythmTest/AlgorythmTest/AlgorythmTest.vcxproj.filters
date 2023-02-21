@@ -321,5 +321,8 @@
     <ClCompile Include="LV0_ArrSimilarity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_DeckOfCards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
