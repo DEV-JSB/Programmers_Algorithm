@@ -204,6 +204,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="LV0_TriangleCompletionCondition2.cpp" />
+    <ClCompile Include="LV0_UpperLowerCases.cpp" />
     <ClCompile Include="LV1_DeckOfCards.cpp" />
     <ClCompile Include="LV1_OurOwnCode.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
