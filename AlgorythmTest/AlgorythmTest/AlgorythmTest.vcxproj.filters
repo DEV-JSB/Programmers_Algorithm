@@ -330,5 +330,8 @@
     <ClCompile Include="LV0_UpperLowerCases.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_IndexChange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
