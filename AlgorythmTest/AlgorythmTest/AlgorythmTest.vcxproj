@@ -221,6 +221,7 @@
     <ClCompile Include="LV0_UpperLowerCases.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV1_aRoughKeyboard.cpp" />
     <ClCompile Include="LV1_DeckOfCards.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
