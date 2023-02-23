@@ -339,5 +339,8 @@
     <ClCompile Include="LV0_CountingK.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_MakeA_withB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
