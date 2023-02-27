@@ -357,5 +357,8 @@
     <ClCompile Include="LV0_JustOneAppearChar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_BinaryPlus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
