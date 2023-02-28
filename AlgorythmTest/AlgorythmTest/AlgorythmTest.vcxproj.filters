@@ -360,5 +360,8 @@
     <ClCompile Include="LV0_BinaryPlus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_HateEnglish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
