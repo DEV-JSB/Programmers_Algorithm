@@ -363,5 +363,8 @@
     <ClCompile Include="LV0_HateEnglish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_LoginSuccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
