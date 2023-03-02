@@ -238,6 +238,7 @@
     <ClCompile Include="LV0_PlusHiddenNumber2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_Ranking.cpp" />
     <ClCompile Include="LV0_StringSort1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
