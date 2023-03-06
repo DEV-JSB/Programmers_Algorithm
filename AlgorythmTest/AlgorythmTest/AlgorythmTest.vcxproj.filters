@@ -390,5 +390,8 @@
     <ClCompile Include="LV2_MinMaxValue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_MakeJadenCaseString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

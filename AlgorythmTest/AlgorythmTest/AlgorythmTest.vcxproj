@@ -500,7 +500,10 @@
     <ClCompile Include="LV0_StringCalculate.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="LV2_MinMaxValue.cpp" />
+    <ClCompile Include="LV2_MakeJadenCaseString.cpp" />
+    <ClCompile Include="LV2_MinMaxValue.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
