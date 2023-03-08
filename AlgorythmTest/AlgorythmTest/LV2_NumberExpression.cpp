@@ -22,7 +22,3 @@ int solution(int n)
     }
     return answer;
 }
-void main()
-{
-    solution(1);
-}
