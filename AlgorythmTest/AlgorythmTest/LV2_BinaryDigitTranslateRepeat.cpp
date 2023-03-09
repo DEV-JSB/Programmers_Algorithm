@@ -22,12 +22,10 @@ vector<int> solution(string s) {
     
     int OriginSize{ (int)s.length() };
     int ZeroCount{ 0 };
-    int TranslateResultNumber{ 0 };
     while (true)
     {
         OriginSize = s.length();
         ZeroCount = 0;
-        TranslateResultNumber = 0;
         for (char c : s)
         {
             if ('0' == c)
