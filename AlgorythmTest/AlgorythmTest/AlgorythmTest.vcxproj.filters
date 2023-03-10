@@ -399,5 +399,8 @@
     <ClCompile Include="LV2_BinaryDigitTranslateRepeat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_TargetNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
