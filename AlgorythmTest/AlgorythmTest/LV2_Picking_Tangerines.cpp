@@ -4,10 +4,27 @@
 
 using namespace std;
 
+void Sort(vector<int>& count)
+{
+    int bigNumIndex{ 0 };
+    for (size_t i{ 0 }; i < count.size(); ++i)
+    {
+        bigNumIndex = i;
+        for (size_t j{ i + 1 }; j < count.size(); ++j)
+        {
+            if (count[bigNumIndex] < count[j])
+                bigNumIndex = j;
+        }
+        int tmp = count[bigNumIndex];
+        count[bigNumIndex] = count[i];
+        count[i] = tmp;
+    }
+}
+
 int solution(int k, vector<int> tangerine) {
     int answer = 0;
     map<int, int> tangerineCount;
-    
+    vector<int>tangerineCountVec;
     for (int i : tangerine)
     {
         if (tangerineCount.find(i - 1) == tangerineCount.end())
@@ -15,29 +32,20 @@ int solution(int k, vector<int> tangerine) {
         else
             ++tangerineCount[i - 1];
     }
-    while (true)
+    for (auto iter = tangerineCount.begin(); iter != tangerineCount.end(); ++iter)
+        tangerineCountVec.push_back((*iter).second);
+    Sort(tangerineCountVec);
+
+    for (int i{ 0 }; i < tangerineCountVec.size(); ++i)
     {
-        int maxCountIndex{ (*tangerineCount.begin()).first };
-        for (auto iter = tangerineCount.begin(); iter != tangerineCount.end(); ++iter)
-        {
-            if (tangerineCount[maxCountIndex] < (*iter).second)
-                maxCountIndex = (*iter).first;
-            else if (tangerineCount[maxCountIndex] == (*iter).second)
-            {
-                if ((*iter).first > maxCountIndex)
-                    maxCountIndex = (*iter).first;
-            }
-        }
-        k -= tangerineCount[maxCountIndex];
-        tangerineCount.erase(maxCountIndex);
+        k -= tangerineCountVec[i];
         ++answer;
         if (k <= 0)
             return answer;
     }
-    return answer;
 }
 
 void main()
 {
-    solution(6, { 1,3,2,5,4,5,2,3 });
+    solution(2, { 1,1,1,1,2,2,2,3 });
 }
