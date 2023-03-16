@@ -408,5 +408,8 @@
     <ClCompile Include="LV2_Picking_Tangerines.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_LongJump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
