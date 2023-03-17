@@ -3,14 +3,15 @@
 using namespace std;
 
 
-int FiboNachi(int count, int num, int answer, int prevNum)
+long long FiboNacci(int count, int num, long long answer, long long prevNum)
 {
     answer += prevNum;
-    answer %= 1234567;
     if (count == num)
-        return answer;
-    return FiboNachi(count + 1, num, answer, answer - prevNum);
+        return answer % 1234567;
+    return FiboNacci(count + 1, num, answer, (answer - prevNum) % 1234567);
 }
-int solution(int n) {
-    return FiboNachi(0, n, 0, 1);
+long long solution(int n) {
+    long long answer;
+    answer = FiboNacci(0, n, 0, 1);
+    return answer;
 }
