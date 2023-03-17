@@ -1,31 +1,16 @@
 #include <string>
 #include <vector>
-
 using namespace std;
 
 
-
-void DFS(const int n ,int number , int addNum ,long long & answer)
+int FiboNachi(int count, int num, int answer, int prevNum)
 {
-    number += addNum;
-    if (n == number || n < number)
-    {
-        if (n == number)
-            ++answer;
-        if (answer > 1234567)
-            answer %= 1234567;
-        return;
-    }
-    DFS(n, number,1, answer);
-    DFS(n, number,2 , answer);
+    answer += prevNum;
+    answer %= 1234567;
+    if (count == num)
+        return answer;
+    FiboNachi(count + 1, num, answer, answer - prevNum);
 }
-
-long long solution(int n) {
-    long long answer = 0;
-    DFS(n, 0,0, answer);
-    return answer;
-}
-void main()
-{
-    solution(4);
+int solution(int n) {
+    return FiboNachi(0, n, 0, 1);
 }
