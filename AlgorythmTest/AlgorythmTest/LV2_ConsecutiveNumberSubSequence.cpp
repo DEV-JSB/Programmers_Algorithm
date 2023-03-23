@@ -9,13 +9,10 @@ int solution(vector<int> elements) {
     for (int i{ 0 }; i < elements.size(); ++i)
     {
         int sum{ 0 };
-        int sumCount = i;
         for (int j{ 0 }; j < elements.size(); ++j)
         {
-            for (int k = 0; k <= sumCount; ++k)
-            {
+            for (int k = 0; k <= i; ++k)
                 sum += elements[(j + k) % elements.size()];
-            }
             if (sums.find(sum) == sums.end())
             {
                 sums.insert({ sum,sum });
