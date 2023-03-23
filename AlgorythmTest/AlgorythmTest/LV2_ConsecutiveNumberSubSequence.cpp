@@ -14,10 +14,7 @@ int solution(vector<int> elements) {
         {
             for (int k = 0; k <= sumCount; ++k)
             {
-                if (j + k >= elements.size())
-                    sum += elements[(j + k) % elements.size()];
-                else
-                    sum += elements[j + k];
+                sum += elements[(j + k) % elements.size()];
             }
             if (sums.find(sum) == sums.end())
             {
@@ -28,9 +25,4 @@ int solution(vector<int> elements) {
         }
     }
     return answer;
-}
-
-void main()
-{
-    solution({ 7,9,1,1,4 });
 }
