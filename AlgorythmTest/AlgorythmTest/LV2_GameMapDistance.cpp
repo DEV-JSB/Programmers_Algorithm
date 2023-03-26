@@ -1,48 +1,56 @@
 #include<vector>
-#include <map>
+#include <queue>
 using namespace std;
 
-
-void DFS(int coast,const vector<vector<int>>& maps, const vector<int> destination,const int x,const int y,int& answer
-    ,vector<vector<bool>>& isPassed)
+struct Node
 {
-    if (x < 0 || y < 0 || x > destination[0] || y > destination[1])
-        return;
-    else if (isPassed[y][x])
-        return;
-    else if (maps[y][x] == 0)
-        return;
-    isPassed[y][x] = true;
-    coast += maps[y][x];
-    if (x == destination[0] && destination[1] == y)
-    {
-        if (0 == answer)
-            answer = coast;
-        else
-            answer = answer > coast ? coast : answer;
-        return;
-    }
-
-    DFS(coast, maps, destination, x , y + 1, answer, isPassed);
-    DFS(coast, maps, destination, x + 1, y, answer, isPassed);
-    DFS(coast, maps, destination, x, y - 1, answer, isPassed);
-    DFS(coast, maps, destination, x - 1, y, answer, isPassed);
-}
-
+    int x;
+    int y;
+    int coast;
+};
 
 int solution(vector<vector<int> > maps)
 {
+    int answer{ 0 };
+    queue<Node> nodes;
+    nodes.push({ Node{0,0,1} });
+
     vector<vector<bool>> isPassed;
     isPassed.resize(maps.size());
     for (size_t i{ 0 }; i < maps[0].size(); ++i)
         isPassed[i].resize(maps[0].size());
-    int answer = 0;
-    DFS(0, maps, { (int)maps[0].size() - 1 , (int)maps.size() - 1 }, 0, 0,answer, isPassed);
-    if (0 == answer)
-        return -1;
-    return answer;
+
+    while (!nodes.empty())
+    {
+        Node nowNode;
+        nowNode.x = nodes.front().x;
+        nowNode.y = nodes.front().y;
+        nowNode.coast = nodes.front().coast;
+        nodes.pop();
+
+        // µµÂø
+        if (nowNode.x == maps[0].size() - 1 && nowNode.y == maps.size() - 1)
+        {
+            answer = nowNode.coast;
+            continue;
+        }
+        if (nowNode.y < maps.size() - 1 && !isPassed[nowNode.y + 1][nowNode.x] && maps[nowNode.y + 1][nowNode.x] == 1)
+            nodes.push(Node{  nowNode.x ,nowNode.y + 1,nowNode.coast + 1 });
+        if (nowNode.y > 0 && !isPassed[nowNode.y - 1][nowNode.x] && maps[nowNode.y - 1][nowNode.x] == 1)
+            nodes.push(Node{ nowNode.x, nowNode.y - 1 ,nowNode.coast + 1 });
+        if (nowNode.x < maps[0].size() - 1 && !isPassed[nowNode.y][nowNode.x + 1] && maps[nowNode.y][nowNode.x + 1] == 1)
+            nodes.push(Node{ nowNode.x + 1 , nowNode.y,nowNode.coast + 1 });
+        if (nowNode.x > 0 && !isPassed[nowNode.y][nowNode.x - 1] && maps[nowNode.y][nowNode.x - 1] == 1)
+            nodes.push(Node{ nowNode.x - 1 , nowNode.y ,nowNode.coast + 1 });
+        isPassed[nowNode.y][nowNode.x] = true;
+
+    }
+
+    
+
+    return answer == 0 ? -1 : answer;
 }
 void main()
 {
-    solution({ {1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1} });
+    solution({ {1,1,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1} });
 }
