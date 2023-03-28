@@ -1,59 +1,43 @@
 #include<vector>
 #include <queue>
+#include <utility>
 using namespace std;
-struct Node
-{
-    int x;
-    int y;
-    int coast;
-};
+
+int moveY[4] = { 1,0,-1,0 };
+int moveX[4] = { 0,1,0,-1 };
+
 int solution(vector<vector<int> > maps)
 {
-    int answer{ 0 };
-    queue<Node> nodes;
-    nodes.push({ Node{0,0,1} });
-    vector<vector<bool>> isPassed;
-    isPassed.resize(maps.size());
-    for (size_t i{ 0 }; i < maps.size(); ++i)
-        isPassed[i].resize(maps[0].size());
-
+    int answer{ -1 };
+    int YSize{ (int)maps.size() };
+    int XSize{ (int)maps[0].size() };
+    queue<pair<int, int>> nodes;
+    nodes.push({ 0,0 });
+    // 이거 하나 배움
+    vector<vector<int>> isPassed(YSize, vector<int>(XSize, -1));
     while (!nodes.empty())
     {
-        Node nowNode;
-        nowNode.x = nodes.front().x;
-        nowNode.y = nodes.front().y;
-        nowNode.coast = nodes.front().coast;
+        pair<int, int> nowNode;
+        nowNode = nodes.front();
         nodes.pop();
         // 도착
-        if (nowNode.x == maps[0].size() - 1 && nowNode.y == maps.size() - 1)
+        if (nowNode.first == maps[0].size() - 1 && nowNode.second == maps.size() - 1)
+            return isPassed[nowNode.second][nowNode.first] + 2;
+        // 0 아래 1 위 2 왼쪽 3 오른쪽
+        for (int i{ 0 }; i < 4; ++i)
         {
-            if (0 == answer)
-                answer = nowNode.coast;
-            else
-                answer = answer < nowNode.coast ? answer : nowNode.coast;
-            continue;
+            int nextX = nowNode.first + moveX[i];
+            int nextY = nowNode.second + moveY[i];
+            if (0 > nextY
+                || maps.size() <= nextY
+                || 0 > nextX
+                || maps[0].size() <= nextX
+                || 0 == maps[nextY][nextX]
+                || -1 != isPassed[nextY][nextX])
+                continue;
+            nodes.push({ nextX,nextY });
+            isPassed[nextY][nextX] = isPassed[nowNode.second][nowNode.first] + 1;
         }
-        if (nowNode.y < maps.size() - 1)
-        {
-            if(!isPassed[nowNode.y + 1][nowNode.x] && maps[nowNode.y + 1][nowNode.x] == 1)
-                nodes.push(Node{ nowNode.x ,nowNode.y + 1,nowNode.coast + 1 });
-        }
-        if (nowNode.y > 0)
-        {
-            if (!isPassed[nowNode.y - 1][nowNode.x] && maps[nowNode.y - 1][nowNode.x] == 1)
-                nodes.push(Node{ nowNode.x, nowNode.y - 1 ,nowNode.coast + 1 });
-        }
-        if (nowNode.x < maps[0].size() - 1)
-        {
-            if (!isPassed[nowNode.y][nowNode.x + 1] && maps[nowNode.y][nowNode.x + 1] == 1)
-                nodes.push(Node{ nowNode.x + 1 , nowNode.y,nowNode.coast + 1 });
-        }
-        if (nowNode.x > 0)
-        {
-            if (!isPassed[nowNode.y][nowNode.x - 1] && maps[nowNode.y][nowNode.x - 1] == 1)
-                nodes.push(Node{ nowNode.x - 1 , nowNode.y ,nowNode.coast + 1 });
-        }
-        isPassed[nowNode.y][nowNode.x] = true;
     }
-    return answer == 0 ? -1 : answer;
+    return -1;
 }
