@@ -1,46 +1,37 @@
 #include <string>
 #include <vector>
+#include <stack>
 using namespace std;
 vector<int> solution(vector<int> numbers)
 {
     vector<int> answer;
-    bool findBigNum{ false };
-    int duplicationCount{ 0 };
-    for (size_t i{ 0 }; i < numbers.size() - 1; ++i)
+    stack<int> willBeAnswer;
+    stack<int> bigStack;
+
+    willBeAnswer.push(-1);
+    bigStack.push(numbers[numbers.size() - 1]);
+
+    for (int i{ (int)numbers.size() - 2 }; 0 <= i; --i)
     {
-        findBigNum = false;
-        duplicationCount = 0;
-        while (numbers[i] == numbers[i + 1])
+        while (!bigStack.empty() && bigStack.top() <= numbers[i])
+            bigStack.pop();
+        if (bigStack.empty())
         {
-            if (i + 1 == numbers.size() - 1)
-            {
-                for (int j{ 0 }; j < duplicationCount + 1; ++j)
-                    answer.push_back(-1);
-                i = numbers.size();
-                findBigNum = true;
-                break;
-            }
-            ++duplicationCount;
-            ++i;
+            bigStack.push(numbers[i]);
+            willBeAnswer.push(-1);
         }
-        for (size_t j{ i + 1 }; j < numbers.size(); ++j)
+        else
         {
-            if (numbers[i] < numbers[j])
-            {
-                findBigNum = true;
-                if (duplicationCount != 0)
-                {
-                    for (int i{ 0 }; i <= duplicationCount; ++i)
-                        answer.push_back(numbers[j]);
-                }
-                else
-                    answer.push_back(numbers[j]);
-                break;
-            }
+            willBeAnswer.push(bigStack.top());
+            bigStack.push(numbers[i]);
         }
-        if (false == findBigNum)
-            answer.push_back(-1);
     }
-    answer.push_back(-1);
+
+
+    while (!willBeAnswer.empty())
+    {
+        answer.push_back(willBeAnswer.top());
+        willBeAnswer.pop();
+    }
     return answer;
 }
