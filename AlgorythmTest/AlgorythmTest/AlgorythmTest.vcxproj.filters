@@ -432,5 +432,8 @@
     <ClCompile Include="LV2_MemoryScore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_WalkInThePark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
