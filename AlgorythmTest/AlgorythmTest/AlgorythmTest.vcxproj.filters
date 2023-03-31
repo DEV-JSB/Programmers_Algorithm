@@ -429,5 +429,8 @@
     <ClCompile Include="LV2_FindBigNumberBehind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_MemoryScore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

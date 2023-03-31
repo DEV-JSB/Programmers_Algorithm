@@ -519,6 +519,7 @@
     <ClCompile Include="LV2_MakeJadenCaseString.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV2_MemoryScore.cpp" />
     <ClCompile Include="LV2_MinMaxValue.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
