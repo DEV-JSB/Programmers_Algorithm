@@ -484,6 +484,7 @@
     <ClCompile Include="LV2_Camouflage.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV2_Camouflage_RE.cpp" />
     <ClCompile Include="LV2_ConsecutiveNumberSubSequence.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
