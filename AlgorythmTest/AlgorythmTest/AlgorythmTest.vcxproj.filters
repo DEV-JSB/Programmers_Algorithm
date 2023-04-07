@@ -441,5 +441,8 @@
     <ClCompile Include="LV2_Camouflage_RE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_RunningRace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
