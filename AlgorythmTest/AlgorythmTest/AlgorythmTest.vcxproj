@@ -260,6 +260,7 @@
     <ClCompile Include="LV0_ThreeSeparator.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_TranslateCharToInt.cpp" />
     <ClCompile Include="LV0_TriangleCompletionCondition.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
