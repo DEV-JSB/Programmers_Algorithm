@@ -60,6 +60,7 @@
     <ClCompile Include="LV0_ArrSimilarity.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_a_and_b_Print.cpp" />
     <ClCompile Include="LV0_Babbling.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
