@@ -6,14 +6,7 @@ int main(void) {
     int n;
     cin >> n;
 
-    if (0 == n % 2)
-    {
-        cout << n << " is even";
-    }
-    else
-    {
-        cout << n << " is odd";
-    }
-
+    cout << n;
+    cout << (n % 2 == 0 ? " is even" : " is odd");
     return 0;
 }
