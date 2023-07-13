@@ -486,5 +486,8 @@
     <ClCompile Include="LV0_DiscriminationOddEven.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_OverwriteString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
