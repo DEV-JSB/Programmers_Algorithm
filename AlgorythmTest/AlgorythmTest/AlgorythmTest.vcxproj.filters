@@ -465,5 +465,8 @@
     <ClCompile Include="LV0_StringFlip2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_PrintSpecialChar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
