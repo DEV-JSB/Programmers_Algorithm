@@ -249,6 +249,7 @@
     <ClCompile Include="LV0_PlusHiddenNumber2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_PrintPlusMathematical.cpp" />
     <ClCompile Include="LV0_PrintSpecialChar.cpp" />
     <ClCompile Include="LV0_PrintString.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
