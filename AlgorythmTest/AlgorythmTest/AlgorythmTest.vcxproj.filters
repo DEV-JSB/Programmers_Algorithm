@@ -468,5 +468,8 @@
     <ClCompile Include="LV0_PrintSpecialChar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ChangeLikeCaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
