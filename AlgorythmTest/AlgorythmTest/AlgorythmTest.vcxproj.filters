@@ -477,5 +477,8 @@
     <ClCompile Include="LV0_PrintPlusMathematical.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_StringAttachPrint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
