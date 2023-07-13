@@ -273,6 +273,7 @@
     <ClCompile Include="LV0_TriangleCompletionCondition2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_TurnString.cpp" />
     <ClCompile Include="LV0_UniqueSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
