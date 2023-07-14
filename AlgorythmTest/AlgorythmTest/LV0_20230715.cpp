@@ -120,3 +120,22 @@ int NumControl1(int n, string control) {
     }
     return answer;
 }
+
+string NumControl2(vector<int> numLog) {
+    string answer = "";
+
+    for (int i = 1; i < numLog.size(); ++i)
+    {
+        int minValue = numLog[i] - numLog[i - 1];
+        if (minValue == 1)
+            answer.push_back('w');
+        else if (minValue == -1)
+            answer.push_back('s');
+        else if (minValue == 10)
+            answer.push_back('d');
+        else if (minValue == -10)
+            answer.push_back('a');
+    }
+
+    return answer;
+}
