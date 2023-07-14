@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <set>
 #include <math.h>
 using namespace std;
 
@@ -38,25 +39,14 @@ int AddSpecificSum(int a, int d, vector<bool> included) {
     return answer;
 }
 
-int GetSameCount(const int a, const int b, const int c)
-{
-    int sameCount = 0;
-    if (a == b)
-        ++sameCount;
-    if (b == c)
-        ++sameCount;
-    if (a == c)
-        ++sameCount;
-    return sameCount;
-}
-int solution(int a, int b, int c) {
+int DiceGame2(int a, int b, int c) {
     int answer = 0;
-    int sameCount = GetSameCount(a, b, c);
-    if (3 == sameCount)
+    set<int> s{ a,b,c };
+    if (3 == s.size())
     {
         answer = (a + b + c) * (pow(a, 2) + pow(b, 2) + pow(c, 2)) * (pow(a, 3) + pow(b, 3) + pow(c, 3));
     }
-    else if (0 != sameCount)
+    else if (2 == s.size())
     {
         answer = (a + b + c) * (pow(a, 2) + pow(b, 2) + pow(c, 2));
     }
