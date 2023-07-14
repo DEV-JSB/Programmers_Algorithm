@@ -90,6 +90,7 @@
     </ClCompile>
     <ClCompile Include="LV0_CodeHandler.cpp" />
     <ClCompile Include="LV0_CombineString.cpp" />
+    <ClCompile Include="LV0_CommonMultiple.cpp" />
     <ClCompile Include="LV0_CompareTwoComputationalValue.cpp" />
     <ClCompile Include="LV0_ContinueCountSum.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

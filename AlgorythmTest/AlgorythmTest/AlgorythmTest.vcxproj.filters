@@ -504,5 +504,8 @@
     <ClCompile Include="LV0_CompareTwoComputationalValue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_CommonMultiple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
