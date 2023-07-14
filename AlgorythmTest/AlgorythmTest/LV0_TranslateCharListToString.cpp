@@ -1,13 +1,6 @@
-#include <string>
-#include <vector>
-
+#include <numeric>
 using namespace std;
 
 string solution(vector<string> arr) {
-    string answer = "";
-    for (string s : arr)
-    {
-        answer += s;
-    }
-    return answer;
+    return accumulate(arr.begin(), arr.end(), string(""));
 }
