@@ -66,3 +66,26 @@ int ProductAndSumOfElements(vector<int> num_list) {
     plusValue *= plusValue;
     return plusValue < multipleValue ? 0 : 1;
 }
+
+int solution(vector<int> num_list) {
+    int answer = 0;
+    int oddSum = 0;
+    int evenSum = 0;
+    for (int num : num_list)
+    {
+        if (0 == num % 2)
+        {
+            evenSum += num;
+            evenSum *= 10;
+        }
+        else
+        {
+            oddSum += num;
+            oddSum *= 10;
+        }
+    }
+    oddSum /= 10;
+    evenSum /= 10;
+    answer = oddSum + evenSum;
+    return answer;
+}
