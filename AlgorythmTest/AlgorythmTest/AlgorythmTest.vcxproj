@@ -266,6 +266,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="LV0_ReturnDifferentValueDependingOddEven.cpp" />
+    <ClCompile Include="LV0_ReturnDifferentValueDependingOnFlag.cpp" />
     <ClCompile Include="LV0_StringAttachPrint.cpp" />
     <ClCompile Include="LV0_StringFlip2.cpp" />
     <ClCompile Include="LV0_StringMultiply.cpp" />
