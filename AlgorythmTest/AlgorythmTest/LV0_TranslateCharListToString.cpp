@@ -1,4 +1,6 @@
 #include <numeric>
+#include <string>
+#include <vector>
 using namespace std;
 
 string solution(vector<string> arr) {

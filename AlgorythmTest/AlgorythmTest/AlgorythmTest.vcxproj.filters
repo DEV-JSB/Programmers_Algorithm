@@ -516,5 +516,8 @@
     <ClCompile Include="LV0_ReturnDifferentValueDependingOnFlag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ReplaceCapitalLetters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -265,6 +265,7 @@
     <ClCompile Include="LV0_Ranking.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="LV0_ReplaceCapitalLetters.cpp" />
     <ClCompile Include="LV0_ReturnDifferentValueDependingOddEven.cpp" />
     <ClCompile Include="LV0_ReturnDifferentValueDependingOnFlag.cpp" />
     <ClCompile Include="LV0_StringAttachPrint.cpp" />
