@@ -510,5 +510,8 @@
     <ClCompile Include="LV0_ReturnDifferentValueDependingOddEven.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_ConditionString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
