@@ -54,3 +54,15 @@ int DiceGame2(int a, int b, int c) {
         answer = a + b + c;
     return answer;
 }
+
+int solution(vector<int> num_list) {
+    int multipleValue = 1;
+    int plusValue = 0;
+    for (int num : num_list)
+    {
+        multipleValue *= num;
+        plusValue += num;
+    }
+    plusValue *= plusValue;
+    return plusValue < multipleValue ? 0 : 1;
+}
