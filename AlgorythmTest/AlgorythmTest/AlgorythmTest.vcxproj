@@ -263,6 +263,7 @@
     </ClCompile>
     <ClCompile Include="LV0_StringAttachPrint.cpp" />
     <ClCompile Include="LV0_StringFlip2.cpp" />
+    <ClCompile Include="LV0_StringMultiply.cpp" />
     <ClCompile Include="LV0_StringSort1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

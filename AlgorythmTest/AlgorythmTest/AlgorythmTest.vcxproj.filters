@@ -495,5 +495,8 @@
     <ClCompile Include="LV0_TranslateCharListToString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_StringMultiply.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
