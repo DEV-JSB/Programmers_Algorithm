@@ -68,6 +68,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="LV0_ChangeLikeCaps.cpp" />
+    <ClCompile Include="LV0_ChangeToLowercase.cpp" />
     <ClCompile Include="LV0_CharacterCoordinate.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
