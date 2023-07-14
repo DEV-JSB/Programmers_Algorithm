@@ -492,5 +492,8 @@
     <ClCompile Include="LV0_CombineString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV0_TranslateCharListToString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
