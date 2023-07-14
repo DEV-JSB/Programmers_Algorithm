@@ -11,3 +11,17 @@ int TheFirstNegativeNumber(vector<int> num_list) {
     }
     return -1;
 }
+
+vector<int> AddElementsArray(vector<int> arr) {
+    vector<int> answer;
+
+    for (int num : arr)
+    {
+        for (int i = 0; i < num; ++i)
+        {
+            answer.insert(answer.end(), arr[i], arr[i]);
+        }
+    }
+
+    return answer;
+}
