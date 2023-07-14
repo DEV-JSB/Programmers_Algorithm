@@ -55,7 +55,7 @@ int DiceGame2(int a, int b, int c) {
     return answer;
 }
 
-int solution(vector<int> num_list) {
+int ProductAndSumOfElements(vector<int> num_list) {
     int multipleValue = 1;
     int plusValue = 0;
     for (int num : num_list)
