@@ -98,7 +98,7 @@ vector<int> LastTwoElements(vector<int> num_list) {
     return num_list;
 }
 
-int solution(int n, string control) {
+int NumControl1(int n, string control) {
     int answer = n;
     for (char c : control)
     {
