@@ -139,3 +139,15 @@ string NumControl2(vector<int> numLog) {
 
     return answer;
 }
+
+vector<int> solution(vector<int> arr, vector<vector<int>> queries) {
+    vector<int> answer;
+    answer = arr;
+    for (vector<int> querie : queries)
+    {
+        int tmp = answer[querie[0]];
+        answer[querie[0]] = answer[querie[1]];
+        answer[querie[1]] = tmp;
+    }
+    return answer;
+}
