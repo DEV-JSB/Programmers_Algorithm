@@ -357,3 +357,12 @@ int 주사위게임3(int a, int b, int c, int d) {
     int answer = GetScore(a,b,c,d);
     return answer;
 }
+
+string 글자이어붙여문자열만들기(string my_string, vector<int> index_list) {
+    string answer = "";
+    for (int index : index_list)
+    {
+        answer += my_string[index];
+    }
+    return answer;
+}
