@@ -469,3 +469,8 @@ int 접미사인지확인하기(string my_string, string is_suffix)
     else
         return 0;
 }
+
+string 문자열앞의n글자(string my_string, int n) 
+{
+    return my_string.substr(0, n);
+}
