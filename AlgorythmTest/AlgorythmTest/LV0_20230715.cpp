@@ -707,3 +707,15 @@ vector<int> N偃除問曖錳模菟(vector<int> num_list, int n) {
     }
     return answer;
 }
+
+int �汝躌S礎熱(vector<int> num_list) {
+    int answer = 0;
+    int oddSum = 0;
+    int evenSum = 0;
+
+    for (int i = 0; i < num_list.size(); ++i)
+    {
+        i % 2 == 0 ? evenSum += num_list[i] : oddSum += num_list[i];
+    }
+    return evenSum < oddSum ? oddSum : evenSum;
+}
