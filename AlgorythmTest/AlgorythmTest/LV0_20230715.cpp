@@ -554,3 +554,10 @@ string 글자지우기(string my_string, vector<int> indices) {
     }
     return answer;
 }
+
+vector<int> 카운트다운(int start, int end) {
+    vector<int> answer;
+    for (int i = start; i >= end; --i)
+        answer.push_back(i);
+    return answer;
+}
