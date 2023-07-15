@@ -459,3 +459,13 @@ vector<string> 접미사배열(string my_string) {
 
     return answer;
 }
+
+int 접미사인지확인하기(string my_string, string is_suffix) 
+{
+    if (is_suffix.size() > my_string.size())
+        return 0;
+    if (my_string.substr(my_string.size() - is_suffix.size(), is_suffix.size()) == is_suffix)
+        return 1;
+    else
+        return 0;
+}
