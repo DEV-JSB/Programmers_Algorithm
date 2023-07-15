@@ -750,3 +750,18 @@ int N보다커질때까지더하기(vector<int> numbers, int n) {
     }
     return answer;
 }
+
+vector<int> 수열과구간쿼리1(vector<int> arr, vector<vector<int>> queries) 
+{
+    for (int i = 0; i < queries.size(); ++i)
+    {
+        for (int j = 0; j < arr.size(); ++j)
+        {
+            if (queries[i][0] <= j && j <= queries[i][1])
+            {
+                ++arr[j];
+            }
+        }
+    }
+    return arr;
+}
