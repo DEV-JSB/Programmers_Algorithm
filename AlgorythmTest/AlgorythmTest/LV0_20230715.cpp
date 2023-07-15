@@ -483,3 +483,14 @@ int 접두사인지확인하기(string my_string, string is_prefix) {
     else
         return 0;
 }
+
+string 세로읽기(string my_string, int m, int c) {
+    string answer = "";
+    int index = 0;
+    while (index < my_string.size())
+    {
+        answer += my_string[index + (c - 1)];
+        index += m;
+    }
+    return answer;
+}
