@@ -863,3 +863,32 @@ int 원하는문자열찾기 (string myString, string pat)
     }
     return 0;
 }
+
+
+string ToUpper(const string& str)
+{
+    string tmp;
+    for (char c : str)
+    {
+        tmp += toupper(c);
+    }
+    return tmp;
+}
+
+string ToLower(const string& str)
+{
+    string tmp;
+    for (char c : str)
+    {
+        tmp += tolower(c);
+    }
+    return tmp;
+}
+vector<string> 배열에서문자열대소문자변환하기(vector<string> strArr) {
+    vector<string> answer;
+    for (string str : strArr)
+    {
+        answer.size() % 2 == 0 ? answer.push_back(ToLower(str)) : answer.push_back(ToUpper(str));
+    }
+    return answer;
+}
