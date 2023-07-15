@@ -494,3 +494,14 @@ string 세로읽기(string my_string, int m, int c) {
     }
     return answer;
 }
+
+string QrCode(int q, int r, string code) {
+    string answer = "";
+
+    for (int i = 0; i < code.size(); ++i)
+    {
+        if (i % q == r)
+            answer += code[i];
+    }
+    return answer;
+}
