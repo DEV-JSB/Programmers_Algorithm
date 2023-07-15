@@ -609,3 +609,13 @@ vector<int> 리스트자르기(int n, vector<int> slicer, vector<int> num_list) {
     }
     return answer;
 }
+
+vector<int> 배열만들기3(vector<int> arr, vector<vector<int>> intervals) {
+    vector<int> answer;
+    for (vector<int> interval : intervals)
+    {
+        for (int i = interval[0]; i <= interval[1]; ++i)
+            answer.push_back(arr[i]);
+    }
+    return answer;
+}
