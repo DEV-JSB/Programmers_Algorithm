@@ -204,7 +204,7 @@ bool IsOnlyFiveAndZero(int num)
     }
     return true;
 }
-vector<int> solution(int l, int r) {
+vector<int> 배열만들기2(int l, int r) {
     vector<int> answer;
     int startNum = l % 5 != 0 ? l + (5 - (l % 5)) : l;
     for (int i = startNum ; i <= r; i += 5)
@@ -214,5 +214,13 @@ vector<int> solution(int l, int r) {
     }
     if (answer.empty())
         answer.push_back(-1);
+    return answer;
+}
+
+
+vector<int> 카운트업(int start, int end) {
+    vector<int> answer;
+    for (int i = start; i <= end; ++i)
+        answer.push_back(i);
     return answer;
 }
