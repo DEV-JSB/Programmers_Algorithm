@@ -892,3 +892,18 @@ vector<string> 배열에서문자열대소문자변환하기(vector<string> strArr) {
     }
     return answer;
 }
+
+string A강조하기(string myString) 
+{
+    string answer = "";
+    for (char c : myString)
+    {
+        if (c == 'a')
+            answer += 'A';
+        else if (c != 'A' && ('A' <= c && c <= 'Z'))
+            answer += tolower(c);
+        else
+            answer += c;
+    }
+    return answer;
+}
