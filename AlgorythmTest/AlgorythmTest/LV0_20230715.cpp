@@ -2,6 +2,7 @@
 #include <vector>
 #include <set>
 #include <math.h>
+#include<iostream>
 using namespace std;
 
 int TheFirstNegativeNumber(vector<int> num_list) {
@@ -571,4 +572,44 @@ int 가까운1찾기(vector<int> arr, int idx) {
         }
     }
     return -1;
+}
+
+vector<int> 리스트자르기(int n, vector<int> slicer, vector<int> num_list) {
+    vector<int> answer;
+    switch (n)
+    {
+    case 1:
+    {
+        auto iter = num_list.begin();
+        auto dest = iter + slicer[1];
+        answer.insert(answer.end(), iter, ++dest);
+        break;
+    }
+    case 2:
+    {
+        auto iter = num_list.begin() + slicer[0];
+        answer.insert(answer.end(), iter, num_list.end());
+        break;
+    }
+        
+    case 3:
+    {
+        auto iter = num_list.begin() + slicer[0];
+        auto dest = iter + slicer[1] - slicer[0];
+        answer.insert(answer.end(),iter, ++dest);
+        break;
+    }
+        
+    case 4:
+        for (int i = slicer[0]; i <= slicer[1]; i += slicer[2])
+        {
+            answer.push_back(num_list[i]);
+        }
+        break;
+    }
+    return answer;
+}
+void main()
+{
+    solution(3, vector<int>{1, 5, 2}, vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9});
 }
