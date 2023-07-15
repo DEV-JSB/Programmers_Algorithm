@@ -646,3 +646,25 @@ vector<int> 이의영역(vector<int> arr) {
         answer.insert(answer.begin(), arr.begin() + start,arr.begin() + (end + 1));
     return answer;
 }
+
+vector<int> 배열조각하기 (vector<int> arr, vector<int> query) {
+    vector<int> answer;
+    for(int num = 0 ; num < query.size() ; ++num)
+    {
+        answer.clear();
+        if (num % 2 == 0)
+        {
+            answer.insert(answer.begin(), arr.begin(), arr.begin() + query[num] + 1);
+        }
+        else
+        {
+            answer.insert(answer.begin(), arr.begin() + query[num], arr.begin() +arr.size());
+        }
+        arr = answer;
+    }
+    return answer;
+}
+void main()
+{
+    solution(vector<int>{0, 1, 2, 3, 4, 5}, vector<int>{4, 1, 2});
+}
