@@ -719,3 +719,12 @@ int È¦¼öVSÂ¦¼ö(vector<int> num_list) {
     }
     return evenSum < oddSum ? oddSum : evenSum;
 }
+
+vector<string> Five¸í¾¿(vector<string> names) {
+    vector<string> answer;
+    for (int i = 0; i < names.size(); i += 5)
+    {
+        answer.push_back(names[i]);
+    }
+    return answer;
+}
