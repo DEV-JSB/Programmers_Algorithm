@@ -398,3 +398,16 @@ vector<int> 배열만들기5(vector<string> intStrs, int k, int s, int l) {
 
     return answer;
 }
+
+string solution(string my_string, vector<vector<int>> queries) {
+
+    for (vector<int> querie : queries)
+    {
+        for (int i = 0; i < (querie[1] - querie[0])/2 + 1; ++i)
+        {
+            swap(my_string[querie[0] + i], my_string[querie[1] - i]);
+        }
+    }
+
+    return my_string;
+}
