@@ -672,3 +672,23 @@ vector<int> N번째원소부터(vector<int> num_list, int n)
     answer.insert(answer.begin(), num_list.begin() + (n-1), num_list.end());
     return answer;
 }
+
+vector<string> 왼쪽오른쪽(vector<string> str_list) {
+    vector<string> answer{};
+    
+    for (int i = 0 ; i < str_list.size() ; ++i)
+    {
+        if (str_list[i] == "l")
+        {
+            answer.insert(answer.begin(), str_list.begin(), str_list.begin() + i);
+            return answer;
+        }
+        else if (str_list[i] == "r")
+        {
+            answer.insert(answer.begin(), str_list.begin() + i + 1, str_list.end());
+
+            return answer;
+        }
+    }
+    return answer;
+}
