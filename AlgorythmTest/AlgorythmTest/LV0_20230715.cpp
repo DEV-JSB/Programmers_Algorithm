@@ -151,3 +151,29 @@ vector<int> 수열과구간쿼리3(vector<int> arr, vector<vector<int>> queries) {
     }
     return answer;
 }
+
+
+vector<int> solution(vector<int> arr, vector<vector<int>> queries) {
+    vector<int> answer;
+
+    for (vector<int> querie : queries)
+    {
+        bool findBigNum = false;
+        int inQuerieCompareNum = querie[2];
+        int bigNum = 1000000;
+        for (int i = querie[0]; i <= querie[1]; ++i)
+        {
+            if (inQuerieCompareNum < arr[i] && arr[i] < bigNum)
+            {
+                findBigNum = true;
+                bigNum = arr[i];
+            }
+        }
+        if (findBigNum)
+            answer.push_back(bigNum);
+        else
+            answer.push_back(-1);
+    }
+
+    return answer;
+}
