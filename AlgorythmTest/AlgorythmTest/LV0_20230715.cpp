@@ -474,3 +474,12 @@ string 문자열앞의n글자(string my_string, int n)
 {
     return my_string.substr(0, n);
 }
+
+int 접두사인지확인하기(string my_string, string is_prefix) {
+    if (is_prefix.size() > my_string.size())
+        return 0;
+    if (my_string.substr(0, is_prefix.size()) == is_prefix)
+        return 1;
+    else
+        return 0;
+}
