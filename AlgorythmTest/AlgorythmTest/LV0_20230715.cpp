@@ -781,3 +781,34 @@ vector<int> 조건에맞게수열변환하기(vector<int> arr)
     }
     return arr;
 }
+
+vector<int> 조건에맞게수열변환하기2(vector<int> arr)
+{
+    for (int i = 0; i < arr.size(); ++i)
+    {
+        if (arr[i] >= 50 && arr[i] % 2 == 0)
+        {
+            arr[i] /= 2;
+        }
+        else if (arr[i] <= 50 && arr[i] % 2 != 0)
+        {
+            arr[i] *= 2;
+            ++arr[i];
+        }
+    }
+    return arr;
+}
+
+int solution(vector<int> arr) 
+{
+    vector<int> prevArr = arr;
+    vector<int> changedArr = ChangeArr(arr);
+    int changedCount = 1;
+    while (prevArr != changedArr)
+    {
+        ++changedCount;
+        prevArr = changedArr;
+        changedArr = ChangeArr(changedArr);
+    }
+    return changedCount - 1;
+}
