@@ -421,3 +421,8 @@ string 부분문자열이어붙여문자열만들기(vector<string> my_strings, vector<vector<i
     }
     return answer;
 }
+
+string 문자열뒤의n글자(string my_string, int n) {
+    string str = my_string.substr(my_string.length() - n, n);
+    return str;
+}
