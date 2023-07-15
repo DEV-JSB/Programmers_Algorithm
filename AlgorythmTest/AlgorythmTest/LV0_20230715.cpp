@@ -426,3 +426,36 @@ string 문자열뒤의n글자(string my_string, int n) {
     string str = my_string.substr(my_string.length() - n, n);
     return str;
 }
+
+vector<string> 접미사배열(string my_string) {
+    vector<string> answer;
+    vector<string> tmp;
+    my_string.find('a');
+    for (char c = 'a'; c <= 'z'; ++c)
+    {
+        if (string::npos == my_string.find(c))
+            continue;
+        for (int i = my_string.size() - 1; i >= 0; --i)
+        {
+            if (c == my_string[i])
+                tmp.push_back(my_string.substr(i, my_string.size() - i));
+        }
+        for (int i = 0; i < tmp.size() - 1; ++i)
+        {
+            for (int j = i + 1 ; j < tmp.size(); ++j)
+            {
+                if (tmp[i] > tmp[j])
+                {
+                    swap(tmp[i], tmp[j]);
+                }
+            }
+        }
+        for (string str : tmp)
+        {
+            answer.push_back(str);
+        }
+        tmp.clear();
+    }
+
+    return answer;
+}
