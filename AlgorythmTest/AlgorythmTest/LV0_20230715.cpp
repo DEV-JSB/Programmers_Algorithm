@@ -846,3 +846,20 @@ int 길이에따른연산(vector<int> num_list)
     }
     return answer;
 }
+
+int 원하는문자열찾기 (string myString, string pat)
+{
+    if (pat.size() > myString.size())
+        return 0;
+    int correctCount{ 0 };
+    for (int i = 0; i < myString.size(); ++i)
+    {
+        if (pat[correctCount] == toupper(myString[i]) || pat[correctCount] == tolower(myString[i]))
+            ++correctCount;
+        else
+            correctCount = 0;
+        if (correctCount == pat.size())
+            return 1;
+    }
+    return 0;
+}
