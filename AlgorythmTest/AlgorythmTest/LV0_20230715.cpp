@@ -812,3 +812,16 @@ int 조건에맞게수열변환하기2(vector<int> arr)
     }
     return changedCount - 1;
 }
+
+int One으로만들기(vector<int> num_list) {
+    int answer = 0;
+    for (int num : num_list)
+    {
+        while (num != 1)
+        {
+            num % 2 == 0 ? num /= 2 : num = (num - 1) / 2;
+            ++answer;
+        }
+    }
+    return answer;
+}
