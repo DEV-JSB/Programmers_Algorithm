@@ -825,3 +825,24 @@ int One으로만들기(vector<int> num_list) {
     }
     return answer;
 }
+
+int 길이에따른연산(vector<int> num_list)
+{
+    int answer = 0;
+    if (num_list.size() >= 11)
+    {
+        for (int n : num_list)
+        {
+            answer += n;
+        }
+    }
+    else
+    {
+        answer = 1;
+        for (int n : num_list)
+        {
+            answer *= n;
+        }
+    }
+    return answer;
+}
