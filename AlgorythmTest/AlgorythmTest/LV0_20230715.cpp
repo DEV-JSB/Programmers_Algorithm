@@ -232,3 +232,24 @@ vector<int> 콜라츠수열만들기(int n) {
         answer.push_back(n % 2 == 0 ? n /= 2 : ++(n *= 3));
     return answer;
 }
+
+vector<int> 배열만들기4(vector<int> arr) {
+    vector<int> stk;
+    int i = 0;
+    while (i < arr.size())
+    {
+        if (stk.empty())
+        {
+            stk.push_back(arr[i]);
+            ++i;
+        }
+        else if (stk.back() < arr[i])
+        {
+            stk.push_back(arr[i]);
+            ++i;
+        }
+        else if (stk.back() >= arr[i])
+            stk.pop_back();
+    }
+    return stk;
+}
