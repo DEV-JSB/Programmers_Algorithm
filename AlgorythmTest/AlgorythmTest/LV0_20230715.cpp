@@ -619,3 +619,30 @@ vector<int> 배열만들기3(vector<int> arr, vector<vector<int>> intervals) {
     }
     return answer;
 }
+
+vector<int> 이의영역(vector<int> arr) {
+    vector<int> answer;
+    int start = -1;
+    int end = -1;
+    for (int i = 0, j = arr.size() - 1; i <= j;)
+    {
+        if (start == -1 && 2 == arr[i])
+            start = i;
+        if (end == -1 && 2 == arr[j])
+            end = j;
+        if (start != -1 && end != -1)
+            break;
+        if (start == -1)
+            ++i;
+        if(end == -1)
+            --j;
+    }
+    
+    if (start == -1 && end == -1)
+        answer.push_back(-1);
+    else if (start == end)
+        answer.push_back(2);
+    else
+        answer.insert(answer.begin(), arr.begin() + start,arr.begin() + (end + 1));
+    return answer;
+}
