@@ -366,3 +366,21 @@ string 글자이어붙여문자열만들기(string my_string, vector<int> index_list) {
     }
     return answer;
 }
+
+
+int GetNumberSum(const string number)
+{
+    int sum = 0;
+    for (char c : number)
+    {
+        sum += c - '0';
+    }
+    return sum;
+}
+
+int 구로나눈나머지(string number) {
+    int answer = 0;
+    int sum = GetNumberSum(number);
+    
+    return sum % 9;
+}
