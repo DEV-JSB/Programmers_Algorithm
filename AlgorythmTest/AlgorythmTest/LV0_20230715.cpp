@@ -516,3 +516,12 @@ vector<int> 문자개수세기(string my_string) {
     }
     return answer;
 }
+
+vector<int> 배열만들기1(int n, int k) {
+    vector<int> answer;
+    for (int i = k; i <= n; i += k)
+    {
+        answer.push_back(i);
+    }
+    return answer;
+}
