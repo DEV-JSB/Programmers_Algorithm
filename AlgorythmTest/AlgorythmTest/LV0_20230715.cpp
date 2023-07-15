@@ -153,7 +153,7 @@ vector<int> 수열과구간쿼리3(vector<int> arr, vector<vector<int>> queries) {
 }
 
 
-vector<int> solution(vector<int> arr, vector<vector<int>> queries) {
+vector<int> 수열과구간쿼리2(vector<int> arr, vector<vector<int>> queries) {
     vector<int> answer;
 
     for (vector<int> querie : queries)
@@ -176,4 +176,19 @@ vector<int> solution(vector<int> arr, vector<vector<int>> queries) {
     }
 
     return answer;
+}
+
+vector<int> 수열과구간쿼리4(vector<int> arr, vector<vector<int>> queries) {
+    for (vector<int> querie : queries)
+    {
+        for (int i = 0; i < arr.size() ; ++i)
+        {
+            if ((querie[0] <= i && i <= querie[1])
+                && (i == 0 || i % querie[2] == 0))
+            {
+                ++arr[i];
+            }
+        }
+    }
+    return arr;
 }
