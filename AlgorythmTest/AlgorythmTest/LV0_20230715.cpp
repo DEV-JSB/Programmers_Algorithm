@@ -782,7 +782,7 @@ vector<int> 조건에맞게수열변환하기(vector<int> arr)
     return arr;
 }
 
-vector<int> 조건에맞게수열변환하기2(vector<int> arr)
+vector<int> ChangeArr(vector<int> arr)
 {
     for (int i = 0; i < arr.size(); ++i)
     {
@@ -799,7 +799,7 @@ vector<int> 조건에맞게수열변환하기2(vector<int> arr)
     return arr;
 }
 
-int solution(vector<int> arr) 
+int 조건에맞게수열변환하기2(vector<int> arr)
 {
     vector<int> prevArr = arr;
     vector<int> changedArr = ChangeArr(arr);
