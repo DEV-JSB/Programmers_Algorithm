@@ -257,3 +257,103 @@ vector<int> 배열만들기4(vector<int> arr) {
 bool 간단한논리연산(bool x1, bool x2, bool x3, bool x4) {
     return (x1 || x2) && (x3 || x4);
 }
+
+
+int GetScore(const int a, const int b, const int c,const int d)
+{
+    int number[4]{ a,b,c,d };
+    int sameCount[4]{ 0 };
+    int same = 0;
+    if (a == b)
+    {
+        ++sameCount[0];
+        ++sameCount[1];
+        ++same;
+    }
+    if (a == c)
+    {
+        ++sameCount[0];
+        ++sameCount[2];
+        ++same;
+    }
+    if (a == d)
+    {
+        ++sameCount[0];
+        ++sameCount[3];
+        ++same;
+    }
+    if (b == c)
+    {
+        ++sameCount[1];
+        ++sameCount[2];
+        ++same;
+    }
+    if (b == d)
+    {
+        ++sameCount[1];
+        ++sameCount[3];
+        ++same;
+    }
+    if (c == d)
+    {
+        ++sameCount[2];
+        ++sameCount[3];
+        ++same;
+    }
+
+    int sameNumber1 = 0;
+    int sameNumber2 = 0;
+
+    switch (same)
+    {
+    case 6:
+        return 1111 * a;
+    case 3:
+        for (int i = 0; i < 4; ++i)
+        {
+            if (sameCount[i] == 2)
+                sameNumber1 = number[i];
+            else if (sameCount[i] == 0)
+                sameNumber2 = number[i];
+        }
+        return pow((10 * sameNumber1 + sameNumber2), 2);
+    case 2:
+    {
+        for (int i = 0; i < 4; ++i)
+        {
+            if (sameNumber1 == 0 && sameCount[i] != 0)
+                sameNumber1 = number[i];
+            else if (sameNumber1 != 0 && number[i] != sameNumber1)
+            {
+                sameNumber2 = number[i];
+                break;
+            }
+        }
+        return (sameNumber1 + sameNumber2) * abs(sameNumber1 - sameNumber2);
+    }
+    case 1:
+    {
+        int score = 1;
+        for (int i = 0; i < 4; ++i)
+        {
+            if (sameCount[i] == 0)
+            {
+                score*= number[i];
+            }
+        }
+        return score;
+    }
+    default:
+        int smallNum = 6;
+        for (int a : number)
+        {
+            smallNum = a < smallNum ? a : smallNum;
+        }
+        return smallNum;
+    }
+}
+
+int 주사위게임3(int a, int b, int c, int d) {
+    int answer = GetScore(a,b,c,d);
+    return answer;
+}
