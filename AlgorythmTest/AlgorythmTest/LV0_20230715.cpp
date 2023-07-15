@@ -224,3 +224,11 @@ vector<int> 카운트업(int start, int end) {
         answer.push_back(i);
     return answer;
 }
+
+vector<int> 콜라츠수열만들기(int n) {
+    vector<int> answer;
+    answer.push_back(n);
+    while (n != 1)
+        answer.push_back(n % 2 == 0 ? n /= 2 : ++(n *= 3));
+    return answer;
+}
