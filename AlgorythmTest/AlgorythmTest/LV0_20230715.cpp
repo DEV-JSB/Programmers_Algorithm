@@ -692,3 +692,9 @@ vector<string> 왼쪽오른쪽(vector<string> str_list) {
     }
     return answer;
 }
+
+
+vector<int> N번째원소까지 (vector<int> num_list, int n)
+{
+    return vector<int>{num_list.begin(), num_list.begin() + n};
+}
