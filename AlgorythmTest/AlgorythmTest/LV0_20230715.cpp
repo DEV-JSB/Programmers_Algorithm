@@ -609,7 +609,3 @@ vector<int> 리스트자르기(int n, vector<int> slicer, vector<int> num_list) {
     }
     return answer;
 }
-void main()
-{
-    solution(3, vector<int>{1, 5, 2}, vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9});
-}
