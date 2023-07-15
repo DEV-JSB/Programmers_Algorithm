@@ -561,3 +561,14 @@ vector<int> 카운트다운(int start, int end) {
         answer.push_back(i);
     return answer;
 }
+
+int 가까운1찾기(vector<int> arr, int idx) {
+    for (int i = idx; i < arr.size(); ++i)
+    {
+        if (arr[i])
+        {
+            return i;
+        }
+    }
+    return -1;
+}
