@@ -192,3 +192,27 @@ vector<int> 수열과구간쿼리4(vector<int> arr, vector<vector<int>> queries) {
     }
     return arr;
 }
+
+bool IsOnlyFiveAndZero(int num)
+{
+    while (num)
+    {
+        int tmp = num % 10;
+        if (tmp != 0 && tmp != 5)
+            return false;
+        num /= 10;
+    }
+    return true;
+}
+vector<int> solution(int l, int r) {
+    vector<int> answer;
+    int startNum = l % 5 != 0 ? l + (5 - (l % 5)) : l;
+    for (int i = startNum ; i <= r; i += 5)
+    {
+        if (IsOnlyFiveAndZero(i))
+            answer.push_back(i);
+    }
+    if (answer.empty())
+        answer.push_back(-1);
+    return answer;
+}
