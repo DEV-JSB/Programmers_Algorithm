@@ -739,3 +739,14 @@ vector<string> 할일목록(vector<string> todo_list, vector<bool> finished) {
     }
     return answer;
 }
+
+
+int N보다커질때까지더하기(vector<int> numbers, int n) {
+    int answer = 0;
+    int index = 0;
+    while (answer <= n)
+    {
+        answer += numbers[index++];
+    }
+    return answer;
+}
