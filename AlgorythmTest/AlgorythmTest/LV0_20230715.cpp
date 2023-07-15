@@ -698,3 +698,12 @@ vector<int> N번째원소까지 (vector<int> num_list, int n)
 {
     return vector<int>{num_list.begin(), num_list.begin() + n};
 }
+
+vector<int> N개간격의원소들(vector<int> num_list, int n) {
+    vector<int> answer;
+    for (int i = 0; i < num_list.size(); i += n)
+    {
+        answer.push_back(num_list[i]);
+    }
+    return answer;
+}
