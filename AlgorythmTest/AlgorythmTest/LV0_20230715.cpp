@@ -728,3 +728,14 @@ vector<string> Five명씩(vector<string> names) {
     }
     return answer;
 }
+
+
+vector<string> 할일목록(vector<string> todo_list, vector<bool> finished) {
+    vector<string> answer;
+    for (int i = 0; i < finished.size(); ++i)
+    {
+        if (!finished[i])
+            answer.push_back(todo_list[i]);
+    }
+    return answer;
+}
