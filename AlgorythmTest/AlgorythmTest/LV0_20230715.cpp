@@ -525,3 +525,32 @@ vector<int> 배열만들기1(int n, int k) {
     }
     return answer;
 }
+
+
+void SelectSort(vector<int>& indices)
+{
+    for (int i = 0; i < indices.size() - 1; ++i)
+    {
+        for (int j = i + 1; j < indices.size(); ++j)
+        {
+            if (indices[j] < indices[i])
+                swap(indices[j], indices[i]);
+        }
+    }
+}
+
+string 글자지우기(string my_string, vector<int> indices) {
+    string answer = "";
+    SelectSort(indices);
+
+    for (int i = 0,j = 0; i < my_string.size(); ++i)
+    {
+        if (i == indices[j])
+        {
+            ++j;
+            continue;
+        }
+        answer += my_string[i];
+    }
+    return answer;
+}
