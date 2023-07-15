@@ -399,7 +399,7 @@ vector<int> 배열만들기5(vector<string> intStrs, int k, int s, int l) {
     return answer;
 }
 
-string solution(string my_string, vector<vector<int>> queries) {
+string 문자열여러번뒤집기(string my_string, vector<vector<int>> queries) {
 
     for (vector<int> querie : queries)
     {
@@ -410,4 +410,14 @@ string solution(string my_string, vector<vector<int>> queries) {
     }
 
     return my_string;
+}
+
+string 부분문자열이어붙여문자열만들기(vector<string> my_strings, vector<vector<int>> parts) {
+    string answer = "";
+
+    for (int i = 0; i < my_strings.size(); ++i)
+    {
+        answer += my_strings[i].substr(parts[i][0], parts[i][1] - parts[i][0] + 1);
+    }
+    return answer;
 }
