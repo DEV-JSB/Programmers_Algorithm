@@ -907,3 +907,14 @@ string A강조하기(string myString)
     }
     return answer;
 }
+
+string 특정한문자를대문자로바꾸기(string my_string, string alp) 
+{
+    string answer;
+
+    for (char c : my_string)
+    {
+        answer += (c == alp[0] && islower(c)) ? toupper(c) : c;
+    }
+    return answer;
+}
