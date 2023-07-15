@@ -505,3 +505,14 @@ string QrCode(int q, int r, string code) {
     }
     return answer;
 }
+
+vector<int> 문자개수세기(string my_string) {
+    vector<int> answer;
+    answer.assign(52, 0);
+    for (char c : my_string)
+    {
+        int index = 'a' <= c && c <= 'z' ? 26 + (c - 'a') : (c - 'A');
+        ++answer[index];
+    }
+    return answer;
+}
