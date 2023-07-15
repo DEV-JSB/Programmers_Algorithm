@@ -384,3 +384,17 @@ int 구로나눈나머지(string number) {
     
     return sum % 9;
 }
+
+
+vector<int> 배열만들기5(vector<string> intStrs, int k, int s, int l) {
+    vector<int> answer;
+
+    for (string str : intStrs)
+    {
+        int num = stoi(str.substr(s, l));
+        if (k < num)
+            answer.push_back(num);
+    }
+
+    return answer;
+}
