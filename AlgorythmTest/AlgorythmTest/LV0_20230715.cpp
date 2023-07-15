@@ -664,7 +664,11 @@ vector<int> 배열조각하기 (vector<int> arr, vector<int> query) {
     }
     return answer;
 }
-void main()
+
+
+vector<int> N번째원소부터(vector<int> num_list, int n) 
 {
-    solution(vector<int>{0, 1, 2, 3, 4, 5}, vector<int>{4, 1, 2});
+    vector<int> answer;
+    answer.insert(answer.begin(), num_list.begin() + (n-1), num_list.end());
+    return answer;
 }
