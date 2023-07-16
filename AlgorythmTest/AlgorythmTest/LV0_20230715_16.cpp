@@ -1555,3 +1555,25 @@ int 날짜비교하기 (vector<int> date1, vector<int> date2)
 
     return 0;
 }
+
+int solution(vector<string> order)
+{
+    int answer = 0;
+    map<string, int> price{{ "iceamericano", 4500 }
+                        , { "americanoice",4500 }
+                        , { "hotamericano",4500 } 
+                        , { "americanohot",4500 } 
+                        , { "americano",4500 } 
+                        , { "icecafelatte",5000 }
+                        , { "cafelatteice",5000 } 
+                        , { "hotcafelatte",5000 } 
+                        , { "cafelattehot",5000 }
+                        , { "cafelatte",5000 }
+                        , { "anything",4500 } };
+    for (string menu : order)
+    {
+        answer += price[menu];
+    }
+
+    return answer;
+}
