@@ -1036,3 +1036,27 @@ vector<string> 문자열잘라서정렬하기(string myString)
 
     return answer;
 }
+
+
+int 간단한식계산하기(string binomial) {
+    int answer = 0;
+    for (int i = 0; i < binomial.size(); ++i)
+    {
+        if (binomial[i] == '+' || binomial[i] == '-' || binomial[i] == '*')
+        {
+            int a = stoi(binomial.substr(0, i - 1));
+            int b = stoi(binomial.substr(i + 2, binomial.size() - (i+2)));
+            switch (binomial[i])
+            {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            }
+        }
+    }
+
+    return answer;
+}
