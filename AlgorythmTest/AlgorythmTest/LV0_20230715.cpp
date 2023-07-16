@@ -932,7 +932,14 @@ string 특정문자열로끝나는가장긴문자열찾기(string myString, string pat)
     return answer;
 }
 
-void main()
-{
-    solution("AbCdEFG", "dE");
+
+int 문자열이몇번등장하는지세기(string myString, string pat) {
+    int answer = 0;
+    for (int i = 0; i + pat.size() <= myString.size(); ++i)
+    {
+        if (myString.substr(i, pat.size()) == pat)
+            ++answer;
+    }
+    return answer;
 }
+
