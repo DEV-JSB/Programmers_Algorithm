@@ -1588,3 +1588,14 @@ string L로만들기(string myString)
     }
     return answer;
 }
+
+vector<vector<int>> 특별한이차원배열1(int n) 
+{
+    vector<vector<int>> answer(n,vector<int>(n));
+    int y = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        answer[y++][i] = 1;
+    }
+    return answer;
+}
