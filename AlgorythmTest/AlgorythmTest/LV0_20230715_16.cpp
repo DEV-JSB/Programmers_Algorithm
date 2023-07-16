@@ -1204,3 +1204,22 @@ int 배열비교하기(vector<int> arr1, vector<int> arr2)
     }
     return answer;
 }
+
+int 문자열묶기(vector<string> strArr)
+{
+    map<int, int> prevAppeared;
+    int bigNum = 0;
+    for (string str : strArr)
+    {
+        if (prevAppeared.find(str.size()) == prevAppeared.end())
+            prevAppeared.insert({ str.size(), 1 });
+        else
+        {
+            ++prevAppeared[str.size()];
+        }
+        if (bigNum < prevAppeared[str.size()])
+            bigNum = prevAppeared[str.size()];
+    }
+
+    return bigNum;
+}
