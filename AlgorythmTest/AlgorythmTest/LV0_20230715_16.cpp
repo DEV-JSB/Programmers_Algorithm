@@ -1223,3 +1223,25 @@ int 문자열묶기(vector<string> strArr)
 
     return bigNum;
 }
+
+void PlusOddEven(vector<int>& arr, bool isOdd,const int n)
+{
+    int startIndex = isOdd ? 0 : 1;
+    int sum;
+    for (int i = startIndex ; i < arr.size(); i += 2)
+    {
+        arr[i] += n;
+    }
+}
+vector<int> 배열의길이에따라다른연산하기 (vector<int> arr, int n)
+{
+    if (arr.size() % 2 == 0)
+    {
+        PlusOddEven(arr, false,n);
+    }
+    else
+    {
+        PlusOddEven(arr, true,n);
+    }
+    return arr;
+}
