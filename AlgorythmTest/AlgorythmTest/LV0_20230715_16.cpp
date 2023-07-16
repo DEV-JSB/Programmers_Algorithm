@@ -1276,3 +1276,31 @@ vector<int> 뒤에서5등위로(vector<int> num_list)
 
     return answer;
 }
+
+int 전국대회선발고사(vector<int> rank, vector<bool> attendance) 
+{
+    int answer = 0;
+    map<int, int> mapRandIndex;
+    vector<int> waitingList;
+    for (int i = 0; i < attendance.size(); ++i)
+    {
+        if (attendance[i])
+        {
+            waitingList.push_back(rank[i]);
+            mapRandIndex.insert({ rank[i],i });
+        }
+    }
+    for (int i = 0; i < waitingList.size() - 1; ++i)
+    {
+        for (int j = i + 1; j < waitingList.size(); ++j)
+        {
+            if (waitingList[i] > waitingList[j])
+            {
+                swap(waitingList[i], waitingList[j]);
+            }
+        }
+    }
+    answer = 10000 * mapRandIndex[waitingList[0]] + 100 * mapRandIndex[waitingList[1]]
+        + mapRandIndex[waitingList[2]];
+    return answer;
+}
