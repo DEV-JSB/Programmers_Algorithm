@@ -1450,7 +1450,7 @@ int 정수찾기(vector<int> num_list, int n)
 }
 
 #include <math.h>
-int solution(int a, int b)
+int 주사위게임1(int a, int b)
 {
     int answer = 0;
     if (a % 2 == 1 && b % 2 == 1)
@@ -1466,3 +1466,4 @@ int solution(int a, int b)
         return abs(a - b);
     }
 }
+
