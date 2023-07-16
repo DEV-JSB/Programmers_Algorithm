@@ -1245,3 +1245,22 @@ vector<int> 배열의길이에따라다른연산하기 (vector<int> arr, int n)
     }
     return arr;
 }
+
+vector<int> 뒤에서5등까지(vector<int> num_list) 
+{
+    vector<int> answer;
+    for (int i = num_list.size() - 1 ; i >= 0; --i)
+    {
+        for (int j = 0; j < i; ++j)
+        {
+            if (num_list[j] > num_list[j + 1])
+                swap(num_list[j], num_list[j + 1]);
+        }
+    }
+    answer.insert(answer.end(), num_list.begin(), num_list.begin() + 5);
+    return answer;
+}
+void main()
+{
+    solution(vector<int>{12, 4, 15, 46, 38, 1, 14});
+}
