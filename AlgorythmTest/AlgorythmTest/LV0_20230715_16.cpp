@@ -1304,3 +1304,12 @@ int 전국대회선발고사(vector<int> rank, vector<bool> attendance)
         + mapRandIndex[waitingList[2]];
     return answer;
 }
+
+int 문자열정수의합(string num_str) {
+    int answer = 0;
+    for (char c : num_str)
+    {
+        answer += c - '0';
+    }
+    return answer;
+}
