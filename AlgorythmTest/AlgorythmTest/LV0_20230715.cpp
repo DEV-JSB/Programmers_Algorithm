@@ -1180,3 +1180,27 @@ vector<int> 배열의길이를2의거듭제곱의로만들기(vector<int> arr)
     }
     return answer;
 }
+
+int 배열비교하기(vector<int> arr1, vector<int> arr2) 
+{
+    int answer = 0;
+    if (arr1.size() != arr2.size())
+    {
+        answer = arr1.size() < arr2.size() ? -1 : 1;
+    }
+    else
+    {
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i = 0; i < arr1.size(); ++i)
+        {
+            sum1 += arr1[i];
+            sum2 += arr2[i];
+        }
+        if (sum1 == sum2)
+            answer = 0;
+        else
+            answer = sum1 < sum2 ? -1 : 1;
+    }
+    return answer;
+}
