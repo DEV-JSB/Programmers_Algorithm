@@ -1405,3 +1405,16 @@ vector<int> 배열의원소삭제하기(vector<int> arr, vector<int> delete_list)
     }
     return answer;
 }
+
+int 특이한이차원배열2(vector<vector<int>> arr) 
+{
+    for (int i = 0; i < arr.size(); ++i)
+    {
+        for (int j = 0; j < arr.size(); ++j)
+        {
+            if (arr[i][j] != arr[j][i])
+                return 0;
+        }
+    }
+    return 1;
+}
