@@ -1467,3 +1467,22 @@ int 주사위게임1(int a, int b)
     }
 }
 
+vector<int> 조건에맞게수열변환하기3(vector<int> arr, int k) 
+{
+    vector<int> answer;
+    if (k % 2 == 1)
+    {
+        for (int num : arr)
+        {
+            answer.push_back(num * k);
+        }
+    }
+    else
+    {
+        for (int num : arr)
+        {
+            answer.push_back(num + k);
+        }
+    }
+    return answer;
+}
