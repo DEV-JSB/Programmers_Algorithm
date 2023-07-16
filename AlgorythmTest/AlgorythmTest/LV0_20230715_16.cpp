@@ -1613,3 +1613,22 @@ int 이차원배열대각선순회하기(vector<vector<int>> board, int k)
     }
     return answer;
 }
+
+vector<vector<int>> 정사각형으로만들기(vector<vector<int>> arr) 
+{
+    vector<vector<int>> answer;
+    int rowCount = arr[0].size();
+    int columnCount = arr.size();
+    if (rowCount < columnCount)
+    {
+        for (int i = 0; i < arr.size(); ++i)
+        {
+            arr[i].insert(arr[i].end(), columnCount - rowCount , 0);
+        }
+    }
+    else if(rowCount > columnCount)
+    {
+        arr.insert(arr.end(),rowCount - columnCount, vector<int>(rowCount, 0));
+    }
+    return arr;
+}
