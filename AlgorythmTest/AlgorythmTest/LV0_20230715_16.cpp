@@ -1260,7 +1260,19 @@ vector<int> 뒤에서5등까지(vector<int> num_list)
     answer.insert(answer.end(), num_list.begin(), num_list.begin() + 5);
     return answer;
 }
-void main()
+
+vector<int> 뒤에서5등위로(vector<int> num_list) 
 {
-    solution(vector<int>{12, 4, 15, 46, 38, 1, 14});
+    vector<int> answer;
+    for (int i = num_list.size() - 1; i >= 0; --i)
+    {
+        for (int j = 0; j < i; ++j)
+        {
+            if (num_list[j] > num_list[j + 1])
+                swap(num_list[j], num_list[j + 1]);
+        }
+    }
+    answer.insert(answer.end(), num_list.begin() + 5, num_list.end());
+
+    return answer;
 }
