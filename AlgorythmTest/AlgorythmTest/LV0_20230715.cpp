@@ -1112,3 +1112,29 @@ vector<int> 빈배열에추가삭제하기(vector<int> arr, vector<bool> flag)
 
     return answer;
 }
+
+vector<int> 배열만들기6(vector<int> arr) 
+{
+    vector<int> answer;
+    for (int i = 0; i < arr.size();)
+    {
+        if (answer.empty())
+        {
+            answer.push_back(arr[i]);
+            ++i;
+        }
+        else if (!answer.empty() && answer.back() == arr[i])
+        {
+            answer.pop_back();
+            ++i;
+        }
+        else if (!answer.empty() && answer.back() != arr[i])
+        {
+            answer.push_back(arr[i]);
+            ++i;
+        }
+    }
+    if (answer.empty())
+        answer.push_back(-1);
+    return answer;
+}
