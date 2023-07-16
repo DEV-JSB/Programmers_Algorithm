@@ -953,7 +953,8 @@ vector<string> AD제거하기(vector<string> strArr) {
     return answer;
 }
 
-vector<string> 공백으로구분하기1(string my_string) {
+vector<string> 공백으로구분하기1(string my_string) 
+{
     vector<string> answer;
     string str = "";
     for (int i = 0; i < my_string.size(); ++i)
@@ -967,6 +968,25 @@ vector<string> 공백으로구분하기1(string my_string) {
             str += my_string[i];
     }
     if(str != "")
+        answer.push_back(str);
+    return answer;
+}
+
+vector<string> solution(string my_string) 
+{
+    vector<string> answer;
+    string str = "";
+    for (int i = 0; i < my_string.size(); ++i)
+    {
+        if (my_string[i] == ' ' && str != "")
+        {
+            answer.push_back(str);
+            str = "";
+        }
+        else if(my_string[i] != ' ')
+            str += my_string[i];
+    }
+    if (str != "")
         answer.push_back(str);
     return answer;
 }
