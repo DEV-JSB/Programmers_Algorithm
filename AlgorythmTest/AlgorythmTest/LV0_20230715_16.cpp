@@ -1342,48 +1342,6 @@ string 문자열로변환(int n)
     return to_string(n);
 }
 
-string solution(string a, string b)
-{
-    string answer = "";
-    int shortLength = a.size() < b.size() ? a.size() : b.size();
-    bool carry = false;
-    for (int i = 0; i < shortLength; ++i)
-    {
-        int sum = (a[a.size() - 1 - i] - '0') + (b[b.size() - 1 - i] - '0');
-        if (carry)
-            ++sum;
-        if (sum > 9)
-        {
-            carry = true;
-            answer += to_string(sum - 10);
-        }
-        else
-        {
-            carry = false;
-            answer += to_string(sum);
-        }
-    }
-    string tmp = answer;
-    answer = "";
-
-    string front = a.length() < b.length() ? b.substr(0, b.size() - a.size()) : a.substr(0, a.size() - b.size());
-    if (carry)
-    {
-        if (front != "")
-            front = to_string(stoi(front) + 1);
-        else
-            front = "1";
-    }
-    else
-    {
-        if (front != "")
-            front = to_string(stoi(front) + 1);
-    }
-    answer += front;
-    for (int i = tmp.size() - 1; i >= 0; --i)
-        answer += tmp[i];
-    return answer;
-}
 
 vector<int> 배열의원소삭제하기(vector<int> arr, vector<int> delete_list) 
 {
@@ -1633,7 +1591,7 @@ vector<vector<int>> 정사각형으로만들기(vector<vector<int>> arr)
     return arr;
 }
 
-vector<string> solution(vector<string> picture, int k) 
+vector<string> 그림확대(vector<string> picture, int k) 
 {
     vector<string> answer;
     
@@ -1645,6 +1603,61 @@ vector<string> solution(vector<string> picture, int k)
             tmp.insert(tmp.end(), k, c);
         }
         answer.insert(answer.end(),k,tmp);
+    }
+    return answer;
+}
+
+
+
+string 두수의합(string a, string b) 
+{
+    string answer = "";
+    string longStr;
+    string shortStr;
+    if (a.size() < b.size())
+    {
+        longStr = b;
+        shortStr = a;
+    }
+    else
+    {
+        longStr = a;
+        shortStr = b;
+    }
+    bool willCarry = false;
+
+    for (int i = 0; i < longStr.size(); ++i)
+    {
+        char a = longStr[longStr.size() - i - 1] - '0';
+        char b;
+        if (i >= shortStr.size())
+        {
+            b = willCarry ? 1 : 0;
+            willCarry = false;
+        }
+        else
+            b = shortStr[shortStr.size() - i - 1] - '0';
+        int sum = a + b;
+
+        if (willCarry)
+        {
+            ++sum;
+            willCarry = false;
+        }
+        if (sum > 9)
+        {
+            willCarry = true;
+        }
+        answer += to_string((sum % 10));
+    }
+    if (willCarry)
+        answer += '1';
+    string tmp = answer;
+    answer = "";
+
+    for (int i = tmp.size() - 1; i >= 0; --i)
+    {
+        answer += tmp[i];
     }
     return answer;
 }
