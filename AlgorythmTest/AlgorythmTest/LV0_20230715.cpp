@@ -1074,3 +1074,16 @@ int 문자열바꿔서찾기 (string myString, string pat) {
 
     return myString.find(pat) == string::npos ? 0 : 1;
 }
+
+string rny_string(string rny_string)
+{
+    string answer = "";
+    for (char c : rny_string)
+    {
+        if (c == 'm')
+            answer += "rn";
+        else
+            answer += c;
+    }
+    return answer;
+}
