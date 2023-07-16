@@ -1087,3 +1087,28 @@ string rny_string(string rny_string)
     }
     return answer;
 }
+
+
+void AddNumberMultiple(vector<int>& arr, const int num)
+{
+    for (int i = 0; i < num * 2; ++i)
+        arr.push_back(num);
+}
+
+void RemoveNumber(vector<int>& arr,const int num)
+{
+    for (int i = 0; i < num; ++i)
+        arr.pop_back();
+}
+
+vector<int> 빈배열에추가삭제하기(vector<int> arr, vector<bool> flag) 
+{
+    vector<int> answer;
+
+    for (int i = 0 ; i < flag.size() ; ++i)
+    {
+        flag[i] ? AddNumberMultiple(answer, arr[i]) : RemoveNumber(answer,arr[i]);
+    }
+
+    return answer;
+}
