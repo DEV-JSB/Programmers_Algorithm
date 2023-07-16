@@ -1439,3 +1439,12 @@ string 꼬리문자열(vector<string> str_list, string ex)
     }
     return answer;
 }
+
+int 정수찾기(vector<int> num_list, int n) 
+{
+    int answer = 0;
+    for (int num : num_list)
+        if (num == n)
+            return 1;
+    return 0;
+}
