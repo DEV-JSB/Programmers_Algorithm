@@ -1008,3 +1008,31 @@ vector<int> X사이의개수(string myString) {
 
     return answer;
 }
+
+vector<string> 문자열잘라서정렬하기(string myString)
+{
+    vector<string> answer;
+    string str = "";
+    for (char c : myString)
+    {
+        if (c == 'x' && str != "")
+        {
+            answer.push_back(str);
+            str = "";
+        }
+        else if (c != 'x')
+            str += c;
+    }
+    if(str != "")
+        answer.push_back(str);
+    for(int i = 0 ; i < answer.size() - 1 ; ++i)
+    {
+        for (int j = i + 1; j < answer.size(); ++j)
+        {
+            if (answer[i] >= answer[j])
+                swap(answer[i], answer[j]);
+        }
+    }
+
+    return answer;
+}
