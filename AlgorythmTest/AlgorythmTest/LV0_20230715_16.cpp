@@ -1428,3 +1428,14 @@ int 부분문자열(string str1, string str2)
 {
     return str2.find(str1) == string::npos ? 0 : 1;
 }
+
+string 꼬리문자열(vector<string> str_list, string ex) 
+{
+    string answer = "";
+    for (string str : str_list)
+    {
+        if (str.find(ex) == string::npos)
+            answer += str;
+    }
+    return answer;
+}
