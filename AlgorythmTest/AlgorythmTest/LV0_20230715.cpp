@@ -943,3 +943,12 @@ int 문자열이몇번등장하는지세기(string myString, string pat) {
     return answer;
 }
 
+vector<string> AD제거하기(vector<string> strArr) {
+    vector<string> answer;
+    for (string str : strArr)
+    {
+        if(str.find("ad") == string::npos)
+            answer.push_back(str);
+    }
+    return answer;
+}
