@@ -1162,3 +1162,24 @@ vector<int> 무작위로K개의수뽑기(vector<int> arr, int k)
 
     return answer;
 }
+
+
+vector<int> 배열의길이를2의거듭제곱의로만들기(vector<int> arr) 
+{
+    vector<int> answer = arr;
+    int num = 2;
+    while (num < arr.size())
+    {
+        num *= 2;
+    }
+    if (num != arr.size())
+    {
+        answer.insert(answer.end(), size_t(num - answer.size()),0);
+    }
+    return answer;
+}
+
+void main()
+{
+    solution(vector<int>{1,2,3,4,5,6});
+}
