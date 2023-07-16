@@ -1138,3 +1138,27 @@ vector<int> 배열만들기6(vector<int> arr)
         answer.push_back(-1);
     return answer;
 }
+
+#include <map>
+vector<int> 무작위로K개의수뽑기(vector<int> arr, int k) 
+{
+    vector<int> answer;
+    map<int, bool> prevAppeared;
+    for (int num : arr)
+    {
+        if (prevAppeared.find(num) == prevAppeared.end())
+        {
+            prevAppeared.insert({ num,true });
+            answer.push_back(num);
+            if (answer.size() == k)
+                break;
+        }
+    }
+    
+    if (answer.size() < k)
+    {
+        answer.insert(answer.end(),size_t(k - answer.size()),-1);
+    }
+
+    return answer;
+}
