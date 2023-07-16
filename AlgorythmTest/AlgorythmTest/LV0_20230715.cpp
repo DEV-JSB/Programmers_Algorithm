@@ -918,3 +918,21 @@ string 특정한문자를대문자로바꾸기(string my_string, string alp)
     }
     return answer;
 }
+
+string 특정문자열로끝나는가장긴문자열찾기(string myString, string pat)
+{
+    string answer = "";
+    for (int i = myString.size() - pat.size(); i >= 0; --i)
+    {
+        if (myString.substr(i, pat.size()) == pat)
+        {
+            return myString.substr(0, i + pat.size());
+        }
+    }
+    return answer;
+}
+
+void main()
+{
+    solution("AbCdEFG", "dE");
+}
