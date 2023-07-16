@@ -1486,3 +1486,62 @@ vector<int> 조건에맞게수열변환하기3(vector<int> arr, int k)
     }
     return answer;
 }
+
+vector<vector<int>> solution(int n)
+{
+    vector<vector<int>> answer(n,vector<int>(n,0));
+    int num = 1;
+    int inputCount = 1;
+    int inputNum = n;
+    int direction[2] = { 0,1 };
+    int nowIndex[2] = { 0,0 };
+    while (inputNum > 0)
+    {
+        for (int i = 0; i < inputNum; ++i)
+        {
+            answer[nowIndex[0]][nowIndex[1]] = num++;
+            if (i + 1 == inputNum)
+                break;
+            nowIndex[0] += direction[0];
+            nowIndex[1] += direction[1];
+        }
+        --inputCount;
+        if (inputCount == 0)
+        {
+            inputCount = 2;
+            --inputNum;
+        }
+        if (direction[0] == 0 && direction[1] == 1)
+        {
+            ++nowIndex[0];
+            direction[0] = 1;
+            direction[1] = 0;
+        }
+        else if (direction[0] == 1 && direction[1] == 0)
+        {
+            --nowIndex[1];
+            direction[0] = 0;
+            direction[1] = -1;
+        }
+        else if (direction[0] == 0 && direction[1] == -1)
+        {
+            --nowIndex[0];
+            direction[0] = -1;
+            direction[1] = 0;
+        }
+        else
+        {
+            ++nowIndex[1];
+            direction[0] = 0;
+            direction[1] = 1;
+        }
+    }
+
+    --inputNum;
+
+    return answer;
+}
+void main()
+{
+    solution(4);
+}
