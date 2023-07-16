@@ -1335,30 +1335,73 @@ string Zero떼기(string n_str)
     return answer;
 }
 
-string solution(string a, string b) 
-{
-    string answer = "";
-    string pivotString;
-    string addString;
-    if (a.size() < b.size())
-    {
-        pivotString = b;
-        addString = a;
-    }
-    else
-    {
-        pivotString = a;
-        addString = b;
-    }
-    for (int i = 0; i < addString.size(); ++i)
-    {
-        
-    }
-    return answer;
-}
 
-string 문자열로변환(int n) 
+string 문자열로변환(int n)
 {
 
     return to_string(n);
+}
+
+string solution(string a, string b)
+{
+    string answer = "";
+    int shortLength = a.size() < b.size() ? a.size() : b.size();
+    bool carry = false;
+    for (int i = 0; i < shortLength; ++i)
+    {
+        int sum = (a[a.size() - 1 - i] - '0') + (b[b.size() - 1 - i] - '0');
+        if (carry)
+            ++sum;
+        if (sum > 9)
+        {
+            carry = true;
+            answer += to_string(sum - 10);
+        }
+        else
+        {
+            carry = false;
+            answer += to_string(sum);
+        }
+    }
+    string tmp = answer;
+    answer = "";
+
+    string front = a.length() < b.length() ? b.substr(0, b.size() - a.size()) : a.substr(0, a.size() - b.size());
+    if (carry)
+    {
+        if (front != "")
+            front = to_string(stoi(front) + 1);
+        else
+            front = "1";
+    }
+    else
+    {
+        if (front != "")
+            front = to_string(stoi(front) + 1);
+    }
+    answer += front;
+    for (int i = tmp.size() - 1; i >= 0; --i)
+        answer += tmp[i];
+    return answer;
+}
+
+vector<int> 배열의원소삭제하기(vector<int> arr, vector<int> delete_list) 
+{
+    vector<int> answer;
+    bool willDelete = false;
+    for (int num : arr)
+    {
+        willDelete = false;
+        for (int listNum : delete_list)
+        {
+            if (listNum == num)
+            {
+                willDelete = true;
+                break;
+            }
+        }
+        if (!willDelete)
+            answer.push_back(num);
+    }
+    return answer;
 }
