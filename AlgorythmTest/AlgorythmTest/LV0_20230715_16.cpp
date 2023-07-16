@@ -1487,7 +1487,7 @@ vector<int> 조건에맞게수열변환하기3(vector<int> arr, int k)
     return answer;
 }
 
-vector<vector<int>> solution(int n)
+vector<vector<int>> 정수를나선형으로배치하기(int n)
 {
     vector<vector<int>> answer(n,vector<int>(n,0));
     int num = 1;
@@ -1541,7 +1541,17 @@ vector<vector<int>> solution(int n)
 
     return answer;
 }
-void main()
+
+int 날짜비교하기 (vector<int> date1, vector<int> date2)
 {
-    solution(4);
+    int answer = 0;
+    for (int i = 0; i < date1.size(); ++i)
+    {
+        if (date1[i] < date2[i])
+            return 1;
+        else if (date1[i] > date2[i])
+            return 0;
+    }
+
+    return 0;
 }
