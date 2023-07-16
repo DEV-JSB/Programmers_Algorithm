@@ -1060,3 +1060,17 @@ int 간단한식계산하기(string binomial) {
 
     return answer;
 }
+
+
+int 문자열바꿔서찾기 (string myString, string pat) {
+    int answer = 0;
+    for (int i = 0; i < myString.size(); ++i)
+    {
+        if (myString[i] == 'A')
+            myString[i] = 'B';
+        else if (myString[i] == 'B')
+            myString[i] = 'A';
+    }
+
+    return myString.find(pat) == string::npos ? 0 : 1;
+}
