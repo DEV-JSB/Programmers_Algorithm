@@ -1168,18 +1168,15 @@ vector<int> 배열의길이를2의거듭제곱의로만들기(vector<int> arr)
 {
     vector<int> answer = arr;
     int num = 2;
-    while (num < arr.size())
+    if (answer.size() == 1)
+        return arr;
+    while (num < answer.size())
     {
         num *= 2;
     }
-    if (num != arr.size())
+    if (num != answer.size())
     {
         answer.insert(answer.end(), size_t(num - answer.size()),0);
     }
     return answer;
-}
-
-void main()
-{
-    solution(vector<int>{1,2,3,4,5,6});
 }
