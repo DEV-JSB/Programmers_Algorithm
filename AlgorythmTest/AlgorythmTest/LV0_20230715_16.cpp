@@ -1334,3 +1334,31 @@ string Zero떼기(string n_str)
     }
     return answer;
 }
+
+string solution(string a, string b) 
+{
+    string answer = "";
+    string pivotString;
+    string addString;
+    if (a.size() < b.size())
+    {
+        pivotString = b;
+        addString = a;
+    }
+    else
+    {
+        pivotString = a;
+        addString = b;
+    }
+    for (int i = 0; i < addString.size(); ++i)
+    {
+        
+    }
+    return answer;
+}
+
+string 문자열로변환(int n) 
+{
+
+    return to_string(n);
+}
