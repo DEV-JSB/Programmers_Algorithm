@@ -1632,3 +1632,19 @@ vector<vector<int>> 정사각형으로만들기(vector<vector<int>> arr)
     }
     return arr;
 }
+
+vector<string> solution(vector<string> picture, int k) 
+{
+    vector<string> answer;
+    
+    for (string str : picture)
+    {
+        string tmp = "";
+        for (char c : str)
+        {
+            tmp.insert(tmp.end(), k, c);
+        }
+        answer.insert(answer.end(),k,tmp);
+    }
+    return answer;
+}
