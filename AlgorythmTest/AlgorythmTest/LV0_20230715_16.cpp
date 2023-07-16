@@ -1418,3 +1418,8 @@ int 특이한이차원배열2(vector<vector<int>> arr)
     }
     return 1;
 }
+
+int 부분문자열인지확인하기(string my_string, string target) 
+{
+    return my_string.find(target) == string::npos ? 0 : 1;
+}
