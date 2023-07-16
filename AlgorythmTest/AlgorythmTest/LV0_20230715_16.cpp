@@ -1423,3 +1423,8 @@ int 부분문자열인지확인하기(string my_string, string target)
 {
     return my_string.find(target) == string::npos ? 0 : 1;
 }
+
+int 부분문자열(string str1, string str2) 
+{
+    return str2.find(str1) == string::npos ? 0 : 1;
+}
