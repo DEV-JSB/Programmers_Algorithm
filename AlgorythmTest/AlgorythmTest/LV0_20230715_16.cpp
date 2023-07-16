@@ -1599,3 +1599,17 @@ vector<vector<int>> 특별한이차원배열1(int n)
     }
     return answer;
 }
+
+int 이차원배열대각선순회하기(vector<vector<int>> board, int k) 
+{
+    int answer = 0;
+    for (int i = 0; i < board.size(); ++i)
+    {
+        for (int j = 0; j < board[i].size(); ++j)
+        {
+            if (i + j <= k)
+                answer += board[i][j];
+        }
+    }
+    return answer;
+}
