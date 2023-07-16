@@ -972,7 +972,7 @@ vector<string> 공백으로구분하기1(string my_string)
     return answer;
 }
 
-vector<string> solution(string my_string) 
+vector<string> 공백으로구분하기2(string my_string)
 {
     vector<string> answer;
     string str = "";
@@ -988,5 +988,23 @@ vector<string> solution(string my_string)
     }
     if (str != "")
         answer.push_back(str);
+    return answer;
+}
+
+vector<int> X사이의개수(string myString) {
+    vector<int> answer;
+    int count = 0;
+    for (char c : myString)
+    {
+        if (c == 'x')
+        {
+            answer.push_back(count);
+            count = 0;
+        }
+        else
+            ++count;
+    }
+    answer.push_back(count);
+
     return answer;
 }
