@@ -1556,7 +1556,7 @@ int 날짜비교하기 (vector<int> date1, vector<int> date2)
     return 0;
 }
 
-int solution(vector<string> order)
+int 커피심부름(vector<string> order)
 {
     int answer = 0;
     map<string, int> price{{ "iceamericano", 4500 }
@@ -1575,5 +1575,16 @@ int solution(vector<string> order)
         answer += price[menu];
     }
 
+    return answer;
+}
+
+string L로만들기(string myString) 
+{
+    string answer = "";
+    for (char c : myString)
+    {
+        answer += c < 'l' ? 'l' : c;
+         
+    }
     return answer;
 }
