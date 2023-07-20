@@ -41,8 +41,3 @@ int solution(int x, int y, int n)
 	}
 	return -1;
 }
-
-void main()
-{
-	solution(10, 40, 30);
-}
