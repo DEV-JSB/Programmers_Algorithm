@@ -543,5 +543,8 @@
     <ClCompile Include="LV1_GetDeliveryBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LV1_Bandaging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
