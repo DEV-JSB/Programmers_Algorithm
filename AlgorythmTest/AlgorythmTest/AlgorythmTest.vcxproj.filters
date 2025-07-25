@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="2025 ReStudy">
+      <UniqueIdentifier>{214f77d0-2bfb-4f78-986b-502d9673402b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LV0_ContinueCountSum.cpp">
@@ -545,6 +548,12 @@
     </ClCompile>
     <ClCompile Include="LV1_Bandaging.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_68644.cpp">
+      <Filter>2025 ReStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="LV1_42840.cpp">
+      <Filter>2025 ReStudy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
