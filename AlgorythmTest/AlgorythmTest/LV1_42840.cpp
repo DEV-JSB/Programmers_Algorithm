@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include <iostream>
+#include <algorithm>
 using namespace std;
 
 vector<int> solution(vector<int> answers) 
@@ -9,26 +9,23 @@ vector<int> solution(vector<int> answers)
 
     vector<vector<int>> students{{1, 2, 3, 4, 5}, { 2,1,2,3,2,4,2,5 }, { 3,3,1,1,2,2,4,4,5,5 }};
     
-    int maxCorrectCount = 0;
-
     vector<int> temp;
 
     for (int i = 0; i < students.size() ; ++i)
     {
-        int studentAnswerIndex = 0;
         int correctCount = 0;
-        for (int answer : answers)
+        for (int answerIndex = 0 ; answerIndex < answers.size() ; ++answerIndex)
         {
-            if (answer == students[i][studentAnswerIndex])
+            if (answers[answerIndex] == students[i][answerIndex % students[i].size()])
             {
                 ++correctCount;
             }
-            studentAnswerIndex = studentAnswerIndex + 1 >= students[i].size() ? 0 : studentAnswerIndex + 1;
         }
         temp.push_back(correctCount);
-        maxCorrectCount = correctCount > maxCorrectCount ? correctCount : maxCorrectCount;
     }
 
+    int maxCorrectCount = 0;
+    maxCorrectCount = *max_element(temp.begin(), temp.end());
     for (int i = 0; i < temp.size(); ++i)
     {
         if (temp[i] == maxCorrectCount)
