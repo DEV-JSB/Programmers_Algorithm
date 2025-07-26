@@ -5,21 +5,12 @@
 using namespace std;
 
 
-struct StageFailureRate
-{
-    int stage;
-    float failureRate;
 
-    StageFailureRate(int stage, float failureRate)
-        : stage(stage), failureRate(failureRate)
-    {
-    }
-};
 vector<int> solution(int N, vector<int> stages) 
 {
     vector<int> answer;
 
-    vector<StageFailureRate> stageFailureRates;
+    vector<pair<int,float>> stageFailureRates;
 
     
     for (int i = 0; i < N; ++i)
@@ -42,18 +33,22 @@ vector<int> solution(int N, vector<int> stages)
         {
             rate = (float)(tryCount - clearCount) / (float)tryCount;
         }
-        stageFailureRates.push_back(StageFailureRate{ i,rate });
+        stageFailureRates.push_back(make_pair(i, rate));
     }
     
     sort(stageFailureRates.begin(), stageFailureRates.end()
-        , [](const StageFailureRate& a, const StageFailureRate& b)
+        , [](const pair<int,float>& a, const pair<int, float>& b)
         {
-            return a.failureRate > b.failureRate;
+            if (a.second == b.second)
+            {
+                return a.first < b.first;
+            }
+            return a.second > b.second;
         });
 
-    for (StageFailureRate info : stageFailureRates)
+    for (pair<int, float> info : stageFailureRates)
     {
-        answer.push_back(info.stage + 1);
+        answer.push_back(info.first + 1);
     }
 
     return answer;
