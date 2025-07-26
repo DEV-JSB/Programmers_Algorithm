@@ -10,52 +10,35 @@ vector<int> solution(int N, vector<int> stages)
 {
     vector<int> answer;
 
-    vector<pair<int,float>> stageFailureRates;
+    vector<int> remains(N + 1, 0);
 
-    
-    for (int i = 0; i < N; ++i)
+    vector<int> reached(N + 3, 0);
+    vector<double> failRatio(N + 1);
+    vector<int> ret(N);
+
+    for (int challengStage : stages)
     {
-        int clearCount = 0;
-        int tryCount = 0;
-        for (int stage : stages)
-        {
-            if (i <= stage - 1)
-            {
-                ++tryCount;
-                if (i < stage - 1)
-                {
-                    ++clearCount;
-                }
-            }
-        }
-        float rate = 0;
-        if (tryCount != 0)
-        {
-            rate = (float)(tryCount - clearCount) / (float)tryCount;
-        }
-        stageFailureRates.push_back(make_pair(i, rate));
+        ++remains[challengStage];
     }
-    
-    sort(stageFailureRates.begin(), stageFailureRates.end()
-        , [](const pair<int,float>& a, const pair<int, float>& b)
-        {
-            if (a.second == b.second)
-            {
-                return a.first < b.first;
-            }
-            return a.second > b.second;
+
+    for (int i{ N + 1 };i > 0;--i)
+    {
+        reached[i] = reached[i + 1] + remains[i];
+    }
+    for (int i{ N + 1 }; i > 0; --i)
+    {
+        failRatio[i] = ((reached[i] == 0) ? 0 : 1.0 * remains[i] / reached[i]);
+    }
+
+    for (int i{ 1 }; i <= N; ++i)
+    {
+        ret[i - 1] = i;
+    }
+
+    sort(ret.begin(), ret.end(), [&failRatio](int& lhs, int& rhs) {
+        if (failRatio[lhs] == failRatio[rhs]) return lhs < rhs;
+        return failRatio[lhs] > failRatio[rhs];
         });
 
-    for (pair<int, float> info : stageFailureRates)
-    {
-        answer.push_back(info.first + 1);
-    }
-
-    return answer;
-}
-
-
-void main()
-{
-    solution(4, { 4,4,4,4,4 });
+    return ret;
 }
