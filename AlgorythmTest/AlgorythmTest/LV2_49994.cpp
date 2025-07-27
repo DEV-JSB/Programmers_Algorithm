@@ -4,36 +4,54 @@
 #include <map>
 using namespace std;
 
-void RecordPassedWay(map<pair<int, int>, vector<pair<int, int>>>& map, const pair<int, int> startPos, const pair<int, int> endPos)
+int GetDirectionIndex(char c)
 {
-	map[startPos].push_back(endPos);
-	map[endPos].push_back(startPos);
+	switch (c)
+	{
+	case 'U':
+		return 0;
+	case 'D':
+		return 1;
+	case 'L':
+		return 2;
+	case 'R':
+		return 3;
+	}
+}
+int GetOppositeDirectionIndex(char c)
+{
+	switch (c)
+	{
+	case 'U':
+		return 1;
+	case 'D':
+		return 0;
+	case 'L':
+		return 3;
+	case 'R':
+		return 2;
+	}
 }
 
-bool IsPassedWay(map<pair<int, int>, vector<pair<int, int>>>& map, const pair<int, int> startPos, const pair<int, int> endPos)
+void RecordPassedWay(int record[][11][4], const pair<int,int> startPos , const pair<int, int> endPos, char dir)
 {
-	auto startPassedWay = map.find(startPos);
-	auto endPassedWay = map.find(endPos);
+	record[startPos.first + 5][startPos.second + 5][GetDirectionIndex(dir)] = 1;
+	record[endPos.first + 5][endPos.second + 5][GetOppositeDirectionIndex(dir)] = 1;
+}
 
-	if (startPassedWay == map.end() || endPassedWay == map.end())
-	{
-		return false;
-	}
-	
-	vector<pair<int, int>>& startPassedWayVec = startPassedWay->second;
-	vector<pair<int, int>>& endPassedWayVec = endPassedWay->second;
-
-	return find(startPassedWayVec.begin(), startPassedWayVec.end(), endPos) != startPassedWayVec.end()
-		|| find(endPassedWayVec.begin(), endPassedWayVec.end(), startPos) != endPassedWayVec.end();
-
+bool IsPassedWay(const int record[][11][4], const pair<int, int> startPos, const pair<int, int> endPos, char dir)
+{
+	return record[startPos.first + 5][startPos.second + 5][GetDirectionIndex(dir)]
+		|| record[endPos.first + 5][endPos.second + 5][GetOppositeDirectionIndex(dir)];
 }
 
 int solution(string dirs)
 {
 	int answer = 0;
 
-	map<pair<int, int>, vector<pair<int,int>>> passedWay;
 	pair<int, int> nowPos{ 0,0 };
+	int record[11][11][4]{ 0 };
+
 	map<char, pair<int, int>> dir{ {'U',{make_pair(0,1)}}
 	,{'D',{make_pair(0,-1)}}
 	,{'R',{make_pair(1,0)}}
@@ -53,14 +71,19 @@ int solution(string dirs)
 		{
 			continue;
 		}
-
-		if (!IsPassedWay(passedWay, nowPos, willMovePos))
+		
+		if (!IsPassedWay(record, nowPos, willMovePos , dirs[i]))
 		{
 			++answer;
 		}
-		RecordPassedWay(passedWay, nowPos, willMovePos);
+		RecordPassedWay(record, nowPos, willMovePos, dirs[i]);
 		nowPos = willMovePos;
 	}
 
 	return answer;
+}
+
+void main()
+{
+	solution("ULURRDLLU");
 }
