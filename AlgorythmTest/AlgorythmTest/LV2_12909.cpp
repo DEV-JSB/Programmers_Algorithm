@@ -1,17 +1,31 @@
 
 #include <iostream>
-
+#include <stack>
 using namespace std;
 
 bool solution(string s)
 {
-	int num = 0;
+	stack<char> test;
+
 	for (int i = 0; i < s.length(); ++i)
 	{
-		num += s[i] == '(' ? 1 : -1;
-		if (num < 0)
-			return false;
+		if (s[i] == '(')
+		{
+			test.push(s[i]);
+		}
+		else
+		{
+			if (test.empty())
+			{
+				return false;
+			}
+			test.pop();
+		}
 	}
 
-	return num == 0;
+	return test.empty();
+}
+
+void main() {
+	solution("(())");
 }

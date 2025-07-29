@@ -16,6 +16,9 @@
     <Filter Include="Programmers\2025 ReStudy">
       <UniqueIdentifier>{214f77d0-2bfb-4f78-986b-502d9673402b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="코딩테스트 합격자되기 몸풀기 문제">
+      <UniqueIdentifier>{bae0a568-57da-476e-8fa1-72431a3ee80d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LV0_ContinueCountSum.cpp">
@@ -565,6 +568,9 @@
       <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV2_87390.cpp">
+      <Filter>Programmers\2025 ReStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="LV2_12909.cpp">
       <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
   </ItemGroup>
