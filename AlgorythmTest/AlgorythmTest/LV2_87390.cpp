@@ -1,22 +1,27 @@
 #include <string>
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
-vector<int> solution(int n, long long left, long long right) 
+
+void PrintStar(int n)
 {
-    vector<int> answer;
 
-    for (long long i = left; i <= right; ++i)
+    for (int i = 0 ; i < n * n ; i += n)
     {
-        answer.push_back(max(i / n, i % n) + 1);
+        for (int j = i; j < i + n ; ++j)
+        {
+            if (j / n < j % n)
+                cout << "%";
+            else
+                cout << "\\";
+        }
+        cout << "\n";
     }
-
-    return answer;
 }
 
 void main()
 {
 
-    solution(4, 7, 14);
+    PrintStar(4);
 }

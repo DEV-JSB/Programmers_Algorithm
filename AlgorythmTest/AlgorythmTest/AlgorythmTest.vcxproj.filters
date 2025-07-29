@@ -1,571 +1,571 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Programmers">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="2025 ReStudy">
+    <Filter Include="Programmers\~2024">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Programmers\2025 ReStudy">
       <UniqueIdentifier>{214f77d0-2bfb-4f78-986b-502d9673402b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LV0_ContinueCountSum.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CutPaper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PushString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SevenCount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Budget.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Failure.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_GymSuit.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_KeyPad.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_NewIDRecommand.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Pocketmon.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_PuppetDraw.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_CorrectBracket.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_Fibonacci.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_LeastCommonMultiple.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SqrtDiscrimination.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CutString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SlicePizza3.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_ColaProblem.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_StringDivide.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ChickenCupon.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_FindNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_IceAmericano.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TallerThenMussk.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SafeZone.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Factorial.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_SubStringMin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Antcorps.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Parallel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OverlapLine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OverlapNumCount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumMultiple.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumMin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumShare.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumRemainder.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Protactor.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_AgeToYear.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumPlus.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_FoodFight.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_FruitSeller.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_TheThreeMusketters.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_VacterialGrowth.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringInString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_MakeHambuger.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_MostNearestWord.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringSort2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_NumberPartner.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_KnightsWeapons.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_HOF.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Babbling.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_HateEven.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_PrivacyCollectionPeriod.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TwoNumDivide.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_GetSquareSize.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_NumberCompare.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Polynomial.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_EvenOddCount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrayElementLength.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Mode.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SlicePizza1.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_FractionPlus.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrMakeTwice.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_EvenPlus.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrAverage.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ClothingStoreDiscount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_GetArrayMiddle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_SlicePizza2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrFlip.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringFlip.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_LambSkewers.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PrintRightTriangle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CharRepeatOutput.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ParticularWordDelete.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrCuttung.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ExoplanetsAge.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OrderOfTreatment.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OrderedPairCount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MorseCode.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ThrowBall.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_RockScissorPaper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Make2Demension.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_DivideMarble.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrayRotation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_OurOwnCode.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_GetPointLocation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_DiceCount.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_FindCompositeNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MakeMaxValue.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_DeleteVowel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringSort1.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PlusHiddenNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Factorization.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CtrlZ.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_DigitPlus.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ChooseMultiple.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MakeMaxValue2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CharacterCoordinate.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TriangleCompletionCondition.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_GetMeasure.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PlusHiddenNumber2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TriangleCompletionCondition2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_FindBiggestNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ArrSimilarity.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_DeckOfCards.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Decryption.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_UpperLowerCases.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_IndexChange.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_369Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CountingK.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MakeA_withB.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_aRoughKeyboard.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_AnAlienDictionary.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringCalculate.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CloseNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_JustOneAppearChar.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_BinaryPlus.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_HateEnglish.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_LoginSuccess.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_UniqueSort.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_FiniteDecimal.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CurseNum3.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OXQuiz.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Ranking.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_Babbling.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_DesktopCleanUp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_MinMaxValue.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_MakeJadenCaseString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_NumberExpression.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_BinaryDigitTranslateRepeat.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_TargetNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_NextBigNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_Picking_Tangerines.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_LongJump.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_Camouflage.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_TopCoat.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_StringMateDelete.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_ConsecutiveNumberSubSequence.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_GameMapDistance.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_FindBigNumberBehind.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_MemoryScore.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_WalkInThePark.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_FindBigNumberBehind_RE.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_Camouflage_RE.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_RunningRace.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PrintString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ThreeSeparator.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CodeHandler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MultipleN.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_a_and_b_Print.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TranslateCharToInt.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringFlip2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PrintSpecialChar.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ChangeLikeCaps.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PrintStringRepeat.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_PrintPlusMathematical.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringAttachPrint.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TurnString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_DiscriminationOddEven.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_OverwriteString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CombineString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_TranslateCharListToString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_StringMultiply.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_MergeBigger.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CompareTwoComputationalValue.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_CommonMultiple.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ReturnDifferentValueDependingOddEven.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ConditionString.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ReturnDifferentValueDependingOnFlag.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ReplaceCapitalLetters.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ChangeToLowercase.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_IntPart.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_ChangeSequence.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV0_20230715_16.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_TranslateNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV2_MakeBigNumber.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_NeighborGrid.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_GetDeliveryBox.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_Bandaging.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Programmers\~2024</Filter>
     </ClCompile>
     <ClCompile Include="LV1_68644.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV1_42840.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV2_12949.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV1_42889.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV2_49994.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
     <ClCompile Include="LV2_87390.cpp">
-      <Filter>2025 ReStudy</Filter>
+      <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
