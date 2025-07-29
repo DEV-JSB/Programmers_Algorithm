@@ -573,5 +573,8 @@
     <ClCompile Include="LV2_12909.cpp">
       <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
+    <ClCompile Include="09_Solution.cpp">
+      <Filter>코딩테스트 합격자되기 몸풀기 문제</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
