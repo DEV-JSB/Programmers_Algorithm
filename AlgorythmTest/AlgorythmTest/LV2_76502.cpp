@@ -4,7 +4,7 @@
 #include <unordered_map>
 using namespace std;
 
-unordered_map<char, char> mapCharPair{ {'[',']'},{'(',')'},{'{','}'} };
+unordered_map<char, char> mapCharPair{ {']','['},{')','('},{'}','{'} };
 
 bool CheckValidPair(stack<char>& stack, char c)
 {
