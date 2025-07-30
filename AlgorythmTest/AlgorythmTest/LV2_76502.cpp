@@ -1,28 +1,17 @@
 #include <string>
 #include <vector>
 #include <stack>
-
+#include <unordered_map>
 using namespace std;
 
-char GetPair(char c)
-{
-    switch (c)
-    {
-    case '}':
-        return '{';
-    case ']':
-        return '[';
-    case ')':
-        return '(';
-    }
-}
+unordered_map<char, char> mapCharPair{ {'[',']'},{'(',')'},{'{','}'} };
 
 bool CheckValidPair(stack<char>& stack, char c)
 {
 
     if (c == '}' || c == ']' || c == ')')
     {
-        if (!stack.empty() && stack.top() == GetPair(c))
+        if (!stack.empty() && stack.top() == mapCharPair[c])
         {
             stack.pop();
         }
