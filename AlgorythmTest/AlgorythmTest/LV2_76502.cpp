@@ -1,28 +1,19 @@
 #include <string>
 #include <vector>
 #include <stack>
-
+#include <unordered_map>
 using namespace std;
 
-char GetPair(char c)
-{
-    switch (c)
-    {
-    case '}':
-        return '{';
-    case ']':
-        return '[';
-    case ')':
-        return '(';
-    }
-}
 
-bool CheckValidPair(stack<char>& stack, char c)
+
+unordered_map<char, char> mapCharPair{ {'[',']'},{'(',')'},{'{','}'} };
+
+bool IsValidPair(stack<char>& stack, char c)
 {
 
     if (c == '}' || c == ']' || c == ')')
     {
-        if (!stack.empty() && stack.top() == GetPair(c))
+        if (!stack.empty() && stack.top() == mapCharPair[c])
         {
             stack.pop();
         }
@@ -35,7 +26,7 @@ bool CheckValidPair(stack<char>& stack, char c)
     {
         stack.push(c);
     }
-    return true;
+    return stack.empty();
 }
 
 int solution(string s)
@@ -47,7 +38,7 @@ int solution(string s)
         stack<char> charStack;
         for (int j = i; j < i + s.length(); ++j)
         {
-            if (CheckValidPair(charStack, s[j % (s.length())]))
+            if (IsValidPair(charStack, s[j % (s.length())]))
             {
                 ++checkCount;
             }
@@ -56,7 +47,7 @@ int solution(string s)
                 break;
             }
         }
-        if (charStack.empty() && checkCount == s.length())
+        if (checkCount == s.length())
         {
             ++answer;
         }
