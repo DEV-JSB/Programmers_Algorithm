@@ -10,32 +10,22 @@ vector<int> solution(vector<int> prices)
 
     stack<int> indexStack;
 
-    indexStack.push(0);
-    for (int i = 1; i < prices.size() ; ++i)
+    for (int i = 0; i < prices.size() ; ++i)
     {
-        while (!indexStack.empty())
+        while (!indexStack.empty() && prices[indexStack.top()] > prices[i])
         {
-            if (i + 1 == prices.size())
-            {
-                answer[indexStack.top()] = i - indexStack.top();
-                indexStack.pop();
-            }
-            else if (prices[indexStack.top()] <= prices[i])
-            {
-                indexStack.push(i);
-                break;
-            }
-            else if (prices[indexStack.top()] > prices[i])
-            {
-                answer[indexStack.top()] = i - indexStack.top();
-                indexStack.pop();
-                if (indexStack.empty())
-                {
-                    indexStack.push(i);
-                    break;
-                }
-            }
+            answer[indexStack.top()] = i - indexStack.top();
+            indexStack.pop();
         }
+        indexStack.push(i);
+    }
+
+    int top = indexStack.top();
+
+    while (!indexStack.empty())
+    {
+        answer[indexStack.top()] = top - indexStack.top();
+        indexStack.pop();
     }
 
     return answer;
@@ -43,5 +33,5 @@ vector<int> solution(vector<int> prices)
 
 void main()
 {
-    solution({ 1,2,3,2,3 });
+    solution({ 1, 2, 3, 2, 3 });
 }
