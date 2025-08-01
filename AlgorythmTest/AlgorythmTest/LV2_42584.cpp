@@ -3,24 +3,41 @@
 #include <stack>
 using namespace std;
 
-vector<int> solution(vector<int> prices) 
+vector<int> solution(vector<int> prices)
 {
     vector<int> answer;
-    
-    for (int i = 0; i < prices.size(); ++i)
+    answer.resize(prices.size(), 0);
+
+    stack<int> indexStack;
+
+    indexStack.push(0);
+    for (int i = 1; i < prices.size() ; ++i)
     {
-        int tmp = 0;
-        for (int j = i + 1; j < prices.size(); ++j)
+        while (!indexStack.empty())
         {
-            if (prices[i] > prices[j])
+            if (i + 1 == prices.size())
             {
-                ++tmp;
+                answer[indexStack.top()] = i - indexStack.top();
+                indexStack.pop();
+            }
+            else if (prices[indexStack.top()] <= prices[i])
+            {
+                indexStack.push(i);
                 break;
             }
-            ++tmp;
+            else if (prices[indexStack.top()] > prices[i])
+            {
+                answer[indexStack.top()] = i - indexStack.top();
+                indexStack.pop();
+                if (indexStack.empty())
+                {
+                    indexStack.push(i);
+                    break;
+                }
+            }
         }
-        answer.push_back(tmp);
     }
+
     return answer;
 }
 
