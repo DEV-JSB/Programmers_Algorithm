@@ -7,24 +7,24 @@ vector<int> solution(vector<int> prices)
 {
     vector<int> answer;
     
-    stack<int> timeCounting;
-    answer.resize(prices.size(), 0);
     for (int i = 0; i < prices.size(); ++i)
     {
-        timeCounting.push(prices[i]);
-        for (int j = 0; j < i; ++j)
+        int tmp = 0;
+        for (int j = i + 1; j < prices.size(); ++j)
         {
-            if (timeCounting.top() >= prices[j])
+            if (prices[i] > prices[j])
             {
-                ++answer[j];
+                ++tmp;
+                break;
             }
+            ++tmp;
         }
+        answer.push_back(tmp);
     }
-
     return answer;
 }
 
 void main()
 {
-    solution({ 3,5,2,6,7,8,1,10,9 });
+    solution({ 1,2,3,2,3 });
 }
