@@ -33,5 +33,5 @@ vector<int> solution(vector<int> prices)
 
 void main()
 {
-    solution({ 1, 2, 3, 2, 3 });
+    solution({ 1,4,5,1,2,3,5,1,5 });
 }
