@@ -2,76 +2,79 @@
 #include <vector>
 #include <stack>
 using namespace std;
-
-int MoveInGraph(vector<int>& graph, char dir, int distance, int nowIndex)
-{
-    int move = 1;
-    int value;
-    int movedIndex = 0;
-    while (distance > 0)
-    {
-        movedIndex = dir == 'U' ? nowIndex - move : nowIndex + move;
-        move++;
-        if (graph[movedIndex] == 0)
-        {
-            continue;
-        }
-        distance--;
-    }
-    return movedIndex;
-}
-
-int FindDownStack(const vector<int>& graph, int nowIndex)
-{
-    int upIndex = nowIndex;
-    while (graph[upIndex] == 0)
-    {
-        upIndex--;
-        if (upIndex < 0)
-        {
-            upIndex = 0;
-            break;
-        }
-    }
-
-    while (graph[nowIndex] == 0)
-    {
-        nowIndex++;
-        if (nowIndex >= graph.size())
-        {
-            return upIndex;
-        }
-    }
-    
-    return nowIndex;
-}
+#include <string>
+#include <vector>
+#include <stack>
+using namespace std;
 
 
-string solution(int n, int k, vector<string> cmd) 
+string solution(int n, int k, vector<string> cmd)
 {
     string answer = "";
     vector<int> graph;
-    stack<int> trashStack;
+    stack<pair<int, int>> trashUpDown;
+    stack<int> trashIndex;
     int nowIndex = k;
     graph.resize(n, 1);
 
+    vector<int> up;
+    vector<int> down;
+
+    up.resize(n + 2, 0);
+    down.resize(n + 2, 0);
+
+    for (int i = 0; i < n; ++i)
+    {
+        up[i + 1] = i - 1;
+        down[i + 1] = i + 1;
+    }
+
+
+
     for (int i = 0; i < cmd.size(); ++i)
     {
+        int nowIndexCorrect = nowIndex + 1;
         char command = cmd[i][0];
         switch (command)
         {
         case 'U':
+        {
+            int size = stoi(cmd[i].substr(2));
+            for (int j = 0; j < size; ++j)
+            {
+                nowIndex = up[nowIndexCorrect];
+                nowIndexCorrect = nowIndex + 1;
+            }
+        }
+            break;
         case 'D':
-            nowIndex = MoveInGraph(graph, command, cmd[i][2] - '0', nowIndex);
+            int size = stoi(cmd[i].substr(2));
+            for (int j = 0; j < size; ++j)
+            {
+                nowIndex = down[nowIndexCorrect];
+                nowIndexCorrect = nowIndex + 1;
+            }
             break;
         case 'Z':
-            graph[trashStack.top()] = 1;
-            trashStack.pop();
+        {
+            graph[trashIndex.top()] = 1;
+            pair<int, int> trashedUpDown = trashUpDown.top();
+            down[trashedUpDown.first + 1] = trashIndex.top();
+            up[trashedUpDown.second + 1] = trashIndex.top();
+
+            trashUpDown.pop();
+            trashIndex.pop();
             break;
+        }
         case 'C':
             graph[nowIndex] = 0;
-            trashStack.push(nowIndex);
-            nowIndex = FindDownStack(graph, nowIndex);
+
+            trashIndex.push(nowIndex);
+            trashUpDown.push(make_pair(up[nowIndexCorrect], down[nowIndexCorrect]));
+
+            down[up[nowIndexCorrect] + 1] = down[nowIndexCorrect];
+            up[down[nowIndexCorrect] + 1] = up[nowIndexCorrect];
+            nowIndex = down[nowIndexCorrect] < n ? down[nowIndexCorrect] : up[nowIndexCorrect];
             break;
         }
     }
@@ -88,7 +91,13 @@ void main()
 {
     int n = 8;
     int k = 2;
-    vector<string> cmd = { "D 2", "C", "U 3", "C", "D 4", "C", "U 2", "Z", "Z" };
+    vector<string> cmd = { "D 2","C","U 3","C","D 4","C" , "U 2" , "Z" , "Z" , "U 1","C" };
 
     string result = solution(n, k, cmd);
+}
+void main()
+{
+    solution(5, 3, { "U 3","C" }); // "OOOXO"
+
+
 }
