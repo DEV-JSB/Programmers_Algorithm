@@ -18,24 +18,25 @@ int solution(int bridge_length, int weight, vector<int> truck_weights)
     }
 
 
-    while (!trucks.empty() || !onBridgeTruck.empty())
+    while (!trucks.empty())
     {
-        if (!trucks.empty() && bridge_length > onBridgeTruck.size()
+        if (bridge_length > onBridgeTruck.size()
             && trucks.front() <= weight - onBridgeWeight)
         {
             onBridgeWeight += trucks.front();
             onBridgeTruck.push(trucks.front());
             passTime.push(time + bridge_length);
             trucks.pop();
-            ++time;
         }
-        else
+
+        ++time;
+        if (time == passTime.front())
         {
-            time = passTime.front();
             onBridgeWeight -= onBridgeTruck.front();
             onBridgeTruck.pop();
             passTime.pop();
         }
+
     }
     return passTime.back();
 }
