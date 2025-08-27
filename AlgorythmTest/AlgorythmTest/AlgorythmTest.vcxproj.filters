@@ -615,5 +615,8 @@
     <ClCompile Include="18_Solution.cpp">
       <Filter>코딩테스트 합격자되기 실습</Filter>
     </ClCompile>
+    <ClCompile Include="19_Solution.cpp">
+      <Filter>코딩테스트 합격자되기 실습</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
