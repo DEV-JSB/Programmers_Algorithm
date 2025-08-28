@@ -18,6 +18,20 @@ int Hashing(string& str)
 	return key % m;
 }
 
+
+long long polynomial_hash(const string& str)
+{
+	const int p = 31;
+	const long long m = 1000000007;
+	long long hash_value = 0;
+
+	for (char c : str)
+	{
+		hash_value = (hash_value * p + c) % m;
+	}
+	return hash_value;
+}
+
 vector<bool> solution(vector<string> string_list, vector<string> query_list)
 {
 	vector<int> hashTable;
