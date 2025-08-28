@@ -32,6 +32,23 @@ long long polynomial_hash(const string& str)
 	return hash_value;
 }
 
+long long hash(const string& str)
+{
+	long long hashValue = 0;
+	long long base = 31;
+	long long mod = 1000000007;
+	long long power = 1;
+
+	for (char c : str)
+	{
+		hashValue = (hashValue + ((c - 'a' + 1) * power) % mod) % mod;
+		power = (power * base) % mod;
+	}
+
+	return hashValue % mod;
+}
+
+
 vector<bool> solution(vector<string> string_list, vector<string> query_list)
 {
 	vector<int> hashTable;
