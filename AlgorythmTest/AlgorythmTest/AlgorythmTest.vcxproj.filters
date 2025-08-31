@@ -621,5 +621,8 @@
     <ClCompile Include="LV1_42576.cpp">
       <Filter>Programmers\2025 ReStudy</Filter>
     </ClCompile>
+    <ClCompile Include="LV2_12981.cpp">
+      <Filter>Programmers\2025 ReStudy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
