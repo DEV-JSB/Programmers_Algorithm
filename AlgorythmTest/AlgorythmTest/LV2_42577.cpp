@@ -1,9 +1,24 @@
 #include <string>
 #include <vector>
 #include <unordered_set>
+#include <algorithm>
 using namespace std;
 
-bool solution(vector<string> phone_book) 
+
+bool solution(vector<string> phone_book)
+{
+    sort(phone_book.begin(), phone_book.end());
+    for (int i = 0; i < phone_book.size() - 1; ++i)
+    {
+        if (phone_book[i] == phone_book[i + 1].substr(0, phone_book[i].length()))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool solution2(vector<string> phone_book) 
 {
     unordered_set<string> hash;
     for (const string str : phone_book)
